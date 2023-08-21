@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Kanit:wght@400;500;600&family=Lobster+Two:wght@400;700&family=Montserrat:wght@300;500;800&family=PT+Sans&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  transition: .3s ease;
+}
+
+/* Estilo de colores por defecto */
+:root {
+  --primaryColor: hsl(94, 55%, 56%);
+  --hoverColor: hsl(93, 75%, 76%);
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --greyText: hsl(0, 0%, 75%);
+  --bgColor: hsl(113, 11%, 85%);
+  --inputColor: hsl(330, 12%, 97%);
+
+  /* Fuente y tipo de tipografia */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+html {
+  font-size: 90%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.icon {
+  font-size: var(--h2FontSize);
+  cursor: pointer;
+}
+
+img,
+video {
+  height: auto;
+  width: 100%;
+}
+
+.mensaje {
+  display: none;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: .8rem 1rem;
+  color: var(--greyText);
+}
+
+.btn .icon {
+  margin-left: .5rem;
+}
+
+.btn:hover {
+  color: var(--primaryColor);
+  background: var(--paleGreen);
+}

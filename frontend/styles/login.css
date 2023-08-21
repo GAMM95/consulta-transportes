@@ -1,0 +1,207 @@
+.loginPage,
+.registroPage {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 7px 50px rgb(214, 223, 213);
+}
+
+.container-login {
+  height: 75vh;
+  width: 60%;
+  margin: auto;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: hsl(0, 0%, 91%);
+}
+
+.videoDiv {
+  position: relative;
+  display: flex;
+  flex-basis: 50%;
+  width: 70%;
+  height: 100%;
+  padding: 0 1.5rem;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.btn-footer {
+  background: var(--whiteColor);
+  color: var(--primaryColor);
+  padding: .8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 400;
+  transition: .3s ease;
+}
+
+
+.btn-footer:hover {
+  background: var(--hoverColor);
+  color: var(--blackColor);
+}
+
+
+video,
+.footerDiv {
+  position: absolute;
+}
+
+.videoLogin,
+.videoRegistro {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.textDiv {
+  position: relative;
+}
+
+.titulo {
+  color: var(--whiteColor);
+  font-size: 35px;
+  font-weight: 800;
+}
+
+p {
+  color: var(--whiteColor);
+  padding: 1rem;
+  font-weight: 400;
+}
+
+.footerDiv {
+  bottom: 10px;
+  padding: 0 1rem;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.248);
+  left: 10px;
+  right: 10px;
+  justify-content: space-between;
+  backdrop-filter: blur(1px);
+  border-radius: 10px;
+}
+
+.text {
+  color: var(--whiteColor);
+}
+
+
+/* Formulario Login */
+.formDiv {
+  flex-basis: 50%;
+  margin: auto;
+  flex-direction: column;
+  gap: 0.25rem;
+  transform: translate(-1rem);
+}
+
+.headerDiv {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+img {
+  width: 30%;
+  padding-bottom: .125rem;
+}
+
+.imgRegistro {
+  width: 20%;
+  padding-bottom: .125rem;
+}
+
+h3 {
+  font-size: 25px;
+  color: var(--blackColor);
+  font-weight: 600;
+}
+
+.form {
+  gap: 1rem;
+}
+
+.inputDiv .icon {
+  color: var(--greyText);
+}
+
+input {
+  background: none;
+  outline: none;
+  border: none;
+  width: 250px;
+}
+
+label {
+  color: var(--blackColor);
+  font-weight: 400;
+  font-size: 14px;
+  padding: .5rem 0;
+  display: block;
+}
+
+.input {
+  gap: .5rem;
+  padding: 1rem;
+  background: var(--inputColor);
+  border-radius: 10px;
+}
+
+.btn-form {
+  padding: .8rem;
+  background: var(--primaryColor);
+  border-radius: 10px;
+  color: var(--whiteColor);
+  align-items: center;
+  margin: auto;
+  padding: .8rem 1.5rem;
+  justify-content: center;
+  font-weight: 400;
+  transition: .3s ease;
+}
+
+.btn-form:hover {
+  background: var(--hoverColor);
+  color: var(--blackColor);
+}
+
+.icon-input {
+  font-size: 25px;
+  transition: .3s ease;
+  cursor: auto;
+}
+
+.forgotPassword {
+  font-size: var(--normalFontSize);
+  color: var(--blackColor);
+  opacity: .7;
+  text-align: center;
+}
+
+.forgot_link {
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 1;
+  color: var(--blackColor);
+}
+
+.mostrarMensaje {
+  display: block;
+  color: var(--whiteColor);
+  padding: 10px;
+  background: rgb(255, 0, 0);
+  border-radius: 3px;
+  text-align: center;
+}
+
+
