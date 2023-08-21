@@ -1,5 +1,4 @@
-.loginPage,
-.registroPage {
+.loginPage {
   height: 100vh;
   width: 100%;
   margin: auto;
@@ -35,18 +34,16 @@
 .btn-footer {
   background: var(--whiteColor);
   color: var(--primaryColor);
-  padding: .8rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 10px;
   font-weight: 400;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
-
 
 .btn-footer:hover {
   background: var(--hoverColor);
   color: var(--blackColor);
 }
-
 
 video,
 .footerDiv {
@@ -96,7 +93,6 @@ p {
   color: var(--whiteColor);
 }
 
-
 /* Formulario Login */
 .formDiv {
   flex-basis: 50%;
@@ -113,12 +109,12 @@ p {
 
 img {
   width: 30%;
-  padding-bottom: .125rem;
+  padding-bottom: 0.125rem;
 }
 
 .imgRegistro {
   width: 20%;
-  padding-bottom: .125rem;
+  padding-bottom: 0.125rem;
 }
 
 h3 {
@@ -146,28 +142,28 @@ label {
   color: var(--blackColor);
   font-weight: 400;
   font-size: 14px;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   display: block;
 }
 
 .input {
-  gap: .5rem;
+  gap: 0.5rem;
   padding: 1rem;
   background: var(--inputColor);
   border-radius: 10px;
 }
 
 .btn-form {
-  padding: .8rem;
+  padding: 0.8rem;
   background: var(--primaryColor);
   border-radius: 10px;
   color: var(--whiteColor);
   align-items: center;
   margin: auto;
-  padding: .8rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   justify-content: center;
   font-weight: 400;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .btn-form:hover {
@@ -177,14 +173,14 @@ label {
 
 .icon-input {
   font-size: 25px;
-  transition: .3s ease;
+  transition: 0.3s ease;
   cursor: auto;
 }
 
 .forgotPassword {
   font-size: var(--normalFontSize);
   color: var(--blackColor);
-  opacity: .7;
+  opacity: 0.7;
   text-align: center;
 }
 
@@ -203,5 +199,3 @@ label {
   border-radius: 3px;
   text-align: center;
 }
-
-

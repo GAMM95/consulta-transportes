@@ -13,7 +13,7 @@ try {
     echo "Ocurrió un error en la conexión.\n";
     handleDatabaseError();
   } else {
-    // echo "Conexión establecida correctamente.";
+    // // echo "Conexión establecida correctamente.";
     // Aquí puedes realizar operaciones con la base de datos
     // ...
     // Luego cierra la conexión
