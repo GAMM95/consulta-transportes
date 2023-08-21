@@ -1,5 +1,6 @@
 <?php
 include("backend/conexion/conexion.php");
+include("backend/funciones/procesar_login.php");
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +13,10 @@ include("backend/conexion/conexion.php");
   <link rel="icon" href="frontend/assets/logo.ico" />
 
   <!-- Enlaces a las hojas de estilo -->
+  <link rel="stylesheet" href="frontend/styles/login_responsive.css">
   <link rel="stylesheet" href="frontend/styles/App.css">
   <link rel="stylesheet" href="frontend/styles/login.css">
-  <link rel="stylesheet" href="frontend/styles/login_responsive.css">
+
 
   <!-- Importacion de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -47,7 +49,7 @@ include("backend/conexion/conexion.php");
 
         <!-- Formulario -->
         <form action="procesar_login.php" method="POST" class="form grid">
-          <span class='mostrarMensaje'>Estado de logeo - aquí</span>
+          <!-- <span class='mostrarMensaje'>Estado de logeo - aquí</span> -->
 
           <div class="inputDiv">
             <label for="username">Usuario</label>
@@ -65,7 +67,7 @@ include("backend/conexion/conexion.php");
             </div>
           </div>
 
-          <button type='submit' class='btn btn-form  flex'>
+          <button type='submit' class='btn btn-form  flex' id='btnIniciarSesion'>
             <span>Iniciar Sesión</span>
             <!-- <AiOutlineSwapRight class='btn-icon icon' /> -->
           </button>
