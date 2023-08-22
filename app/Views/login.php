@@ -5,13 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../public/assets/logo.ico" />
+  <link rel="icon" href="/consulta-transportes/public/assets/logo.ico" />
 
   <!-- Enlaces a las hojas de estilo -->
-  <link rel="stylesheet" href="../public/styles/App.css">
-  <link rel="stylesheet" href="../public/styles/login.css">
-  <link rel="stylesheet" href="../public/styles/login_responsive.css">
-
+  <link rel="stylesheet" href="/consulta-transportes/public/styles/App.css">
+  <link rel="stylesheet" href="/consulta-transportes/public/styles/login.css">
+  
   <!-- Importacion de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -26,7 +25,7 @@
       <!-- Panel de video  -->
       <div class="videoDiv">
         <!-- Reproductor de video de fondo -->
-        <video src="../public/assets/videoLogin.mp4" autoplay muted loop class='videoLogin'></video>
+        <video src="/consulta-transportes/public/assets/videoLogin.mp4" autoplay muted loop class='videoLogin'></video>
 
         <!-- Texto descriptivo -->
         <div class="textDiv">
@@ -39,7 +38,7 @@
       <div class="formDiv flex">
         <!-- Encabezado y logo -->
         <div class="headerDiv">
-          <img src="../public/assets/image.png" alt="imagen de mde" />
+          <img src="/consulta-transportes/public/assets/image.png" alt="imagen de mde" />
           <h3>Bienvenido</h3>
         </div>
 

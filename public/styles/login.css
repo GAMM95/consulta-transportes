@@ -48,6 +48,11 @@
   transition: 0.3s ease;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+}
+
 /* Cambio de color en el botón del pie de página al pasar el mouse */
 .btn-footer:hover {
   background: var(--hoverColor);
@@ -233,4 +238,70 @@ label {
   background: rgb(255, 0, 0);
   border-radius: 3px;
   text-align: center;
+}
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+  .loginPage,
+  .registroPage {
+    padding: 50px 50px 0 50px;
+  }
+
+  .container-login{
+    flex-direction: column;
+  }
+
+  .videoDiv {
+    flex: 00 200px;
+    width: 100%;
+  }
+
+  .formDiv {
+    flex: 1;
+    flex-basis: auto;
+    padding-bottom: 50px;
+  }
+
+  .button {
+    padding: 1rem 1.75rem;
+  }
+
+  .button__icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0 0 var(--header-height) 0;
+  }
+
+  .section {
+    padding: 2rem 0 4rem;
+  }
+
+  .section__subtitle {
+    margin-bottom: var(--mb-3);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .loginPage,
+  .registroPage {
+    padding: 25px 25px 0 25px;
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 2.25rem;
+  }
+
+  .container-login{
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
 }

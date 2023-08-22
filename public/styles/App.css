@@ -29,10 +29,10 @@
   --smallestFontSize: .75rem;
 }
 
-.flex {
+/* .flex {
   display: flex;
   align-items: center;
-}
+} */
 
 .grid {
   display: grid;
