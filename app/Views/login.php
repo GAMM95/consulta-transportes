@@ -17,16 +17,18 @@
 
   <!-- Título de la página -->
   <title>Consulta Transportes - Login</title>
-
 </head>
 
 <body>
+  <!-- Contenedor principal de la página de inicio de sesión -->
   <div class='loginPage flex'>
     <div class="container-login flex">
       <!-- Panel de video  -->
       <div class="videoDiv">
+        <!-- Reproductor de video de fondo -->
         <video src="../public/assets/videoLogin.mp4" autoplay muted loop class='videoLogin'></video>
 
+        <!-- Texto descriptivo -->
         <div class="textDiv">
           <h2 class='titulo'>SubGerencia de Transportes</h2>
           <p>Sistema de consultas de transportes</p>
@@ -35,16 +37,15 @@
 
       <!-- Panel del formulario -->
       <div class="formDiv flex">
-        <!-- logo -->
+        <!-- Encabezado y logo -->
         <div class="headerDiv">
           <img src="../public/assets/image.png" alt="imagen de mde" />
           <h3>Bienvenido</h3>
         </div>
 
-        <!-- Formulario -->
+        <!-- Formulario de inicio de sesión -->
         <form action="index.php?action=login" method="POST" class="form grid">
-          <!-- <span class='mostrarMensaje'>Estado de logeo - aquí</span> -->
-
+          <!-- Campos de entrada para usuario y contraseña -->
           <div class="inputDiv">
             <label for="username">Usuario</label>
             <div class="input flex">
@@ -61,16 +62,16 @@
             </div>
           </div>
 
+          <!-- Botón de inicio de sesión -->
           <button type='submit' class='btn btn-form  flex' name='btnIniciarSesion' content='Iniciar Sesión'>
             <span>Iniciar Sesión</span>
+            <!-- Icono (si fuera necesario) -->
             <!-- <AiOutlineSwapRight class='btn-icon icon' /> -->
           </button>
-
         </form>
       </div>
     </div>
   </div>
-
 </body>
 
 </html>

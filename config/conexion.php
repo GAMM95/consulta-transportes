@@ -6,13 +6,16 @@ class Conexion
 {
   private $conector = null;
 
-  // Método para obtener una conexión a la base de datos
+  /**
+   * Obtiene una conexión a la base de datos utilizando los valores de configuración.
+   * @return PDO|null Retorna el objeto de conexión PDO si la conexión es exitosa, o null en caso contrario.
+   */
   public function getConexion()
   {
-    // Crea una nueva instancia de PDO para conectarse a SQL Server
+    // Crea una nueva instancia de PDO para conectarse a SQL Server utilizando las configuraciones.
     $this->conector = new PDO("sqlsrv:server=" . SERVIDOR . ";database=" . DATABASE, USUARIO, PASSWORD);
     
-    // Devuelve el objeto de conexión PDO
+    // Devuelve el objeto de conexión PDO.
     return $this->conector;
   }
 }
@@ -33,6 +36,3 @@ if ($con->getConexion() != null) {
   echo "Error al conectarse a la base de datos";
 }
 ?>
-
-
-
