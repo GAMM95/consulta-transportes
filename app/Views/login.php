@@ -5,12 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../public/assets/logo.ico" />
+  <link rel="icon" href="public/assets/logo.ico" />
 
   <!-- Enlaces a las hojas de estilo -->
-  <link rel="stylesheet" href="../public/styles/App.css">
-  <link rel="stylesheet" href="../public/styles/login.css">
-  <link rel="stylesheet" href="../public/styles/login_responsive.css">
+  <link rel="stylesheet" href="http://localhost/ConsultaTransportes/public/styles/App.css">
+  <link rel="stylesheet" href="http://localhost/ConsultaTransportes/public/styles/login.css">
+  <link rel="stylesheet" href="http://localhost/ConsultaTransportes/public/styles/login_responsive.css">
+
+  <!-- Importacion libreria SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
   <!-- Importacion de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -26,7 +29,7 @@
       <!-- Panel de video  -->
       <div class="videoDiv">
         <!-- Reproductor de video de fondo -->
-        <video src="../public/assets/videoLogin.mp4" autoplay muted loop class='videoLogin'></video>
+        <video src="public/assets/videoLogin.mp4" autoplay muted loop class='videoLogin'></video>
 
         <!-- Texto descriptivo -->
         <div class="textDiv">
@@ -39,7 +42,7 @@
       <div class="formDiv flex">
         <!-- Encabezado y logo -->
         <div class="headerDiv">
-          <img src="../public/assets/image.png" alt="imagen de mde" />
+          <img src="public/assets/image.png" alt="imagen de mde" />
           <h3>Bienvenido</h3>
         </div>
 
@@ -50,7 +53,7 @@
             <label for="username">Usuario</label>
             <div class="input flex">
               <i class='bx bxs-user icon-input icon'></i>
-              <input type='text' id='username' placeholder='Ingrese su usuario' name='username' />
+              <input type='text' id='username' placeholder='Ingrese su usuario' name='username' required />
             </div>
           </div>
 
@@ -58,16 +61,15 @@
             <label for="password">Contraseña</label>
             <div class="input flex">
               <i class='bx bxs-lock icon-input icon'></i>
-              <input type='password' id='password' placeholder='Ingrese su contraseña' name='password' />
+              <input type='password' id='password' placeholder='Ingrese su contraseña' name='password' required />
             </div>
           </div>
 
           <!-- Botón de inicio de sesión -->
           <button type='submit' class='btn btn-form  flex' name='btnIniciarSesion' content='Iniciar Sesión'>
             <span>Iniciar Sesión</span>
-            <!-- Icono (si fuera necesario) -->
-            <!-- <AiOutlineSwapRight class='btn-icon icon' /> -->
           </button>
+
         </form>
       </div>
     </div>

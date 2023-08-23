@@ -1,5 +1,7 @@
 <?php
-require_once '../app/Models/Usuario.php';
+// require_once '../app/Models/Usuario.php';
+require_once 'app/Models/Usuario.php';
+
 
 class LoginController
 {
@@ -8,13 +10,14 @@ class LoginController
      */
     public function showLoginForm()
     {
-        require_once '../app/Views/login.php';
+        // require_once '../app/Views/login.php';
+        require_once 'app/Views/login.php';
     }
 
     /**
      * Procesa el inicio de sesión cuando se envía el formulario.
      */
-    public function processLogin()
+    public function procesarLogin()
     {
         // Verifica si la solicitud es POST (es decir, se envió el formulario)
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -34,7 +37,9 @@ class LoginController
                 exit();
             } else {
                 // Si el inicio de sesión falla, muestra un mensaje de error
-                echo "Inicio de sesión fallido. Verifica tus credenciales.";
+                $_SESSION['login_message'] = 'Inicio de sesión fallido. Verifica tus credenciales.';
+                header("Location: index.php?action=login");
+                exit();
             }
         }
     }

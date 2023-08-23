@@ -10,4 +10,3 @@ header("Location: index.php");
 
 // Finalizar la ejecución del script
 exit();
-?>

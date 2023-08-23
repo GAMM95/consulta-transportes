@@ -61,8 +61,7 @@ video,
 }
 
 /* Estilos para los videos de login y registro */
-.videoLogin,
-.videoRegistro {
+.videoLogin {
   /* Configuraciones de los videos de fondo */
   height: 100%;
   width: 100%;
@@ -207,22 +206,6 @@ label {
   font-size: 25px;
   transition: 0.3s ease;
   cursor: auto;
-}
-
-/* Estilos para el enlace de recuperación de contraseña */
-.forgotPassword {
-  font-size: var(--normalFontSize);
-  color: var(--blackColor);
-  opacity: 0.7;
-  text-align: center;
-}
-
-/* Estilos para el enlace de recuperación de contraseña con subrayado */
-.forgot_link {
-  text-decoration: underline;
-  cursor: pointer;
-  opacity: 1;
-  color: var(--blackColor);
 }
 
 /* Estilos para el mensaje de mostrar estado de logeo */

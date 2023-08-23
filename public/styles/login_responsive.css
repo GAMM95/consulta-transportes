@@ -1,15 +1,16 @@
 /*=============== BREAKPOINTS ===============*/
-@media (max-width: 602px) {
-  .container {
+/* For large devices */
+@media screen and (max-width: 602px) {
+  .container-login {
     height: 100%;
     width: 100%;
     flex-direction: column;
     padding: 1.5rem;
   }
 
-  .videoDiv {
+  /* .videoDiv {
     width: 100%;
-  }
+  } */
 
   .titulo {
     font-size: 20px;
@@ -29,7 +30,7 @@
 
   .formDiv {
     gap: 1rem;
-    transform: translateY(-.5rem);
+    transform: translateY(-0.5rem);
   }
 
   .headerDiv {
@@ -53,8 +54,9 @@
   }
 }
 
-/*=============== BREAKPOINTS ===============*/
-@media (max-width: 778px) {
+
+/* For large devices */
+@media screen and (max-width: 778px) {
   .titulo {
     font-size: 25px;
   }
@@ -85,9 +87,9 @@
   }
 }
 
-/*=============== BREAKPOINTS ===============*/
-@media (max-width: 1024px) {
-  .container {
+/* For large devices */
+@media screen and (max-width: 927px) {
+  .container-login {
     width: 85%;
   }
 }
