@@ -1,23 +1,32 @@
 /* Estilos para la página de inicio de sesión */
 .loginPage {
-  /* Configuraciones generales del contenedor de la página */
+  /*Configuracionesgeneralesdelcontenedordelapágina*/
   height: 100vh;
   width: 100%;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 7px 50px rgb(214, 223, 213);
+  /* box-shadow: 2px 2px 8px var(--greyText); */
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
 
 /* Estilos para el contenedor principal del login */
 .container-login {
-  /* Configuraciones del contenedor de login */
+  /*Configuracionesdelcontenedordelogin*/
   height: 75vh;
   width: 60%;
   margin: auto;
   justify-content: space-between;
-  border-radius: 10px;
+  border-radius: 1rem;
   background: hsl(0, 0%, 91%);
+  box-shadow: 2px 2px 8px var(--greyText);
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
 
 /* Estilos para el panel de video */

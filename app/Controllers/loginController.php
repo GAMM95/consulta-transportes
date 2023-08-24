@@ -8,7 +8,7 @@ class LoginController
     /**
      * Muestra el formulario de inicio de sesión.
      */
-    public function showLoginForm()
+    public function mostrarFormLogin()
     {
         // require_once '../app/Views/login.php';
         require_once 'app/Views/login.php';
@@ -37,9 +37,10 @@ class LoginController
                 exit();
             } else {
                 // Si el inicio de sesión falla, muestra un mensaje de error
-                $_SESSION['login_message'] = 'Inicio de sesión fallido. Verifica tus credenciales.';
-                header("Location: index.php?action=login");
-                exit();
+                echo "verifica tus credenciales";
+                // $_SESSION['login_message'] = 'Inicio de sesión fallido. Verifica tus credenciales.';
+                // header("Location: index.php?action=login");
+                // exit();
             }
         }
     }

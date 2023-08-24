@@ -5,12 +5,16 @@
     height: 100%;
     width: 100%;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: .5rem;
   }
 
-  /* .videoDiv {
+  .videoDiv {
     width: 100%;
-  } */
+  }
+
+  .videoLogin {
+    width: 100%;
+  }
 
   .titulo {
     font-size: 20px;

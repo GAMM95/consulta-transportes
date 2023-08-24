@@ -21,6 +21,6 @@ switch ($action) {
         // Si el valor de "action" es cualquier otro o está vacío
     default:
         // Mostrar el formulario de inicio de sesión
-        $controller->showLoginForm();
+        $controller->mostrarFormLogin();
         break;
 }
