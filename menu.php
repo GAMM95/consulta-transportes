@@ -16,7 +16,7 @@ if (!isset($_SESSION['username'])) {
   <link rel="icon" href="public/assets/logo.ico" />
 
   <!-- Importacion de estilos -->
-  <link rel="stylesheet" href="http://localhost/ConsultaTransportes/public/styles/appMenu.css">
+  <link rel="stylesheet" href="../public/styles/appMenu.css">
   <title>Consulta Transportes</title>
 </head>
 

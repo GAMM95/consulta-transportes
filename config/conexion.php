@@ -35,4 +35,3 @@ if ($con->getConexion() != null) {
 } else {
   echo "Error al conectarse a la base de datos";
 }
-?>
