@@ -4,8 +4,6 @@ Software       :  Sistema de Consultas de Transportes
 DBMS           :  SQL Server
 Base de Datos  :  TRANSPORTES
 Script         :  Consultas
-Responsable    :  Ing. Jhonatan Mantilla Miñano
-Email          :  jhonatanmm.1995@gmail.com
 */
 
 -- =============================================
