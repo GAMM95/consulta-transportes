@@ -1,0 +1,31 @@
+/* Estilo de colores por defecto */
+:root {
+  --primaryColor: hsl(94, 59%, 35%);
+  --hoverColor: #bdf094;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+
+  /* Fuente y tipo de tipografia */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.headerSection {
+  justify-content: space-between;
+}
+
+h2 {
+  color: var(--blackColor);
+  font-weight: 700;
+}
+
