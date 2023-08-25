@@ -126,7 +126,7 @@ p {
   margin: auto;
   flex-direction: column;
   gap: 0.25rem;
-  transform: translate(-1rem);
+  /* transform: translate(-1rem); */
 }
 
 /* Estilos para el encabezado y el logo */

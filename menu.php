@@ -1,7 +1,8 @@
 <?php
 session_start();
+// Verificar si no hay una sesión iniciada
 if (!isset($_SESSION['username'])) {
-  header("Location: index.php"); // Redirige a la página de inicio de sesión si no hay sesión iniciada
+  header("Location: index.php"); // Redirigir a la página de inicio de sesión si no hay sesión iniciada
   exit();
 }
 ?>
@@ -15,29 +16,23 @@ if (!isset($_SESSION['username'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="public/assets/logo.ico" />
 
-  <!-- Importacion de estilos -->
-  <link rel="stylesheet" href="../public/styles/appMenu.css">
+  <!-- Importación de estilos -->
+  <link rel="stylesheet" href="./public/styles/appMenu.css">
   <title>Consulta Transportes</title>
 </head>
 
-<!-- Reutilizacion de codigo - partials -->
-
-
 <body>
+  <!-- Contenedor principal -->
   <div class="container">
     <?php
+    // Incluir la barra lateral desde un archivo externo
     include("app/Views/partials/sideBar.php");
     ?>
-        <?php
+    <?php
+    // Incluir el cuerpo de la página desde un archivo externo
     include("app/Views/partials/body.php");
     ?>
-
-
-    <h2>Bienvenido, <?php echo $_SESSION['username']; ?>!</h2>
-    <p>Esta es tu página de menú.</p>
-    <a href="logout.php">Cerrar sesión</a> <!-- Agrega un enlace para cerrar sesión -->
   </div>
-
 </body>
 
 </html>

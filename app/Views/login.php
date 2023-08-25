@@ -44,6 +44,7 @@
         </div>
       </div>
 
+      <!-- Verificación del estado para mostrar mensajes de error -->
       <?php
       $state = $_GET['state'] ?? '';
       if ($state === 'failed') {
@@ -69,7 +70,7 @@
             <label for="username">Usuario</label>
             <div class="input flex">
               <i class='bx bxs-user icon-input icon'></i>
-              <input type='text' id='username' placeholder='Ingrese su usuario' name='username' required />
+              <input type='text' id='username' placeholder='Ingrese su usuario' name='username' required autofocus />
             </div>
           </div>
 
