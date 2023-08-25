@@ -39,7 +39,7 @@ class LoginController
                 // Si el inicio de sesión falla, muestra un mensaje de error
                 echo "verifica tus credenciales";
                 // $_SESSION['login_message'] = 'Inicio de sesión fallido. Verifica tus credenciales.';
-                // header("Location: index.php?action=login");
+                header("Location: index.php?state=failed");
                 // exit();
             }
         }

@@ -33,7 +33,7 @@
   }
 
   .formDiv {
-    gap: 1rem;
+    /* gap: 1rem; */
     transform: translateY(-0.5rem);
   }
 
@@ -55,6 +55,9 @@
 
   input {
     width: 100%;
+  }
+  .btn{
+    margin-block: 1rem;
   }
 }
 
@@ -78,7 +81,7 @@
   }
 
   .headerDiv {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
   }
 
   h3 {

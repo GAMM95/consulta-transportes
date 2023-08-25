@@ -8,12 +8,18 @@
   <link rel="icon" href="public/assets/logo.ico" />
 
   <!-- Enlaces a las hojas de estilo -->
-  <link rel="stylesheet" href="http://localhost/ConsultaTransportes/public/styles/App.css">
-  <link rel="stylesheet" href="http://localhost/ConsultaTransportes/public/styles/login.css">
-  <link rel="stylesheet" href="http://localhost/ConsultaTransportes/public/styles/login_responsive.css">
+  <link rel="stylesheet" href="./public/styles/App.css">
+  <link rel="stylesheet" href="./public/styles/login.css">
+  <link rel="stylesheet" href="./public/styles/login_responsive.css">
 
   <!-- Importacion libreria SweetAlert2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <!-- Importacion de libreria jquery -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 
   <!-- Importacion de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -38,6 +44,17 @@
         </div>
       </div>
 
+      <!-- Verificación del estado para mostrar mensajes de error -->
+      <?php
+      $state = $_GET['state'] ?? '';
+      if ($state === 'failed') {
+        echo "<script>
+            toastr.error('Credenciales incorrectas.', 'Inicio de Sesión Fallido.');
+
+            </script>";
+      }
+      ?>
+
       <!-- Panel del formulario -->
       <div class="formDiv flex">
         <!-- Encabezado y logo -->
@@ -53,7 +70,7 @@
             <label for="username">Usuario</label>
             <div class="input flex">
               <i class='bx bxs-user icon-input icon'></i>
-              <input type='text' id='username' placeholder='Ingrese su usuario' name='username' required />
+              <input type='text' id='username' placeholder='Ingrese su usuario' name='username' required autofocus />
             </div>
           </div>
 

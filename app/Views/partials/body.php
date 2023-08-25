@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Enlaces a las hojas de estilo -->
-  <link rel="stylesheet" href="http://localhost/ConsultaTransportes/public/styles/appMenu.css">
-  <link rel="stylesheet" href="http://localhost/ConsultaTransportes/public/styles/sidebar.css">
+  <link rel="stylesheet" href="./public/styles/appMenu.css">
+  <link rel="stylesheet" href="./public/styles/partials/body.css">
 
   <!-- Importacion de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -15,9 +15,23 @@
 </head>
 
 <body>
+  <!-- Contenedor principal -->
   <div class="mainContent">
-    body
 
+    <!-- Incluir el encabezado desde un archivo externo -->
+    <?php
+    include("app/Views/partials/header.php");
+    ?>
+
+    <!-- Contenedor inferior -->
+    <div class="bottom flex">
+
+      <!-- Incluir el pie de página desde un archivo externo -->
+      <?php
+      include("app/Views/partials/footer.php");
+      ?>
+
+    </div>
   </div>
 </body>
 
