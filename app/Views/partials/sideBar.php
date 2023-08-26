@@ -41,7 +41,7 @@
         <li class="listItem">
           <a href="clientes.php" class="menuLink flex">
             <i class='bx bx-id-card icon'></i>
-            <span class="smallText">Clientes</span>
+            <span class="smallText">Tarjetas de circulación</span>
           </a>
         </li>
 
@@ -49,7 +49,7 @@
         <li class="listItem">
           <a href="vehiculos.php" class="menuLink flex">
             <i class='bx bx-car icon'></i>
-            <span class="smallText">Vehiculos</span>
+            <span class="smallText">Papeletas</span>
           </a>
         </li>
 
@@ -57,17 +57,17 @@
         <li class="listItem">
           <a href="transportes.php" class="menuLink flex">
             <i class='bx bx-truck icon'></i>
-            <span class="smallText">20:13</span>
+            <span class="smallText">Paraderos</span>
           </a>
         </li>
 
         <!-- Item Usuarios -->
-        <li class="listItem">
+        <!-- <li class="listItem">
           <a href="usuarios.php" class="menuLink flex">
             <i class='bx bx-user icon'></i>
             <span class="smallText">Usuarios</span>
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
 

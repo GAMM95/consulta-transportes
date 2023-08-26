@@ -28,12 +28,12 @@ class Usuario
    */
   public function iniciarSesion()
   {
-    $query = "SELECT * FROM USUARIO_APLICATIVO WHERE USU_usuario= :username AND USU_password = :password";
+    $query = "EXEC SP_Usuario_Aplicativo_Validar :username, :password"; // Llama al procedimiento almacenado
     $stmt = $this->conector->prepare($query);
-    $stmt->bindParam(':username', $this->username); // Vincula el nombre de usuario
-    $stmt->bindParam(':password', $this->password); // Vincula la contraseña
-    $stmt->execute(); // Ejecuta la consulta
+    $stmt->bindParam(':username', $this->username);
+    $stmt->bindParam(':password', $this->password);
+    $stmt->execute();
 
-    return $stmt->fetch() !== false; // Retorna true si hay resultados, o false si no los hay
+    return $stmt->fetch() !== false;
   }
 }
