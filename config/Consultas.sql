@@ -40,7 +40,6 @@ WHERE UNI_placa = '8234-2T'
 ORDER BY TAR_fechaemision DESC;
 go
 
-
 -- =================================================================
 -- 2.- CONSULTA PARA MOSTRAR PAPELETAS NO PAGADAS
 -- =================================================================
@@ -60,7 +59,3 @@ LEFT JOIN ASOCIACION A ON U.UNI_codigo=A.ASO_codigo
 INNER JOIN PERSONA P ON P.PER_codigo=U.PRO_codigo
 WHERE UNI_placa IN ('6195-2T')
 GO
-
-/*--------------------*/
- -- CONSULTA PARA MOSTRAR DATOS DE LOS CONDUCTORES
- 
