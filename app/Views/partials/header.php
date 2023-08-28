@@ -19,12 +19,12 @@
       </div>
     </div>
 
-    <div class="cardSection flex">
+    <!-- <div class="cardSection flex">
       <div class="rightCard flex">
 
       </div>
-    </div>
-x
+    </div> -->
+
   </div>
 </body>
 

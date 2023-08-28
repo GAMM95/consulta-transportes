@@ -8,6 +8,7 @@
   <!-- Enlaces a las hojas de estilo -->
   <link rel="stylesheet" href="./public/styles/appMenu.css">
   <link rel="stylesheet" href="./public/styles/partials/sidebar.css">
+  <!-- <link rel="stylesheet" href="./public/styles/partials/header.css"> -->
 
   <!-- Importacion de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -39,7 +40,7 @@
 
         <!-- Item Trajetas de circulacion -->
         <li class="listItem">
-          <a href="clientes.php" class="menuLink flex">
+          <a href="/app/Views/inicio.php" class="menuLink flex">
             <i class='bx bxs-id-card icon '></i>
             <span class="smallText">Tarjetas de circulación</span>
           </a>
@@ -47,7 +48,7 @@
 
         <!-- Item Vehiculos -->
         <li class="listItem">
-          <a href="vehiculos.php" class="menuLink flex">
+          <a href="papeletas.php" class="menuLink flex">
             <i class='bx bxs-notepad icon'></i>
             <span class="smallText">Papeletas</span>
           </a>
@@ -65,10 +66,13 @@
     </div>
 
     <button class="logout btn">
-      <a href="logout.php">
-        <i class='bx bx-log-out-circle icon'></i>
-        Cerrar sesión
-      </a> <!-- Agrega un enlace para cerrar sesión -->
+      <div class="log">
+        <a href="logout.php">
+          <i class='bx bx-log-out-circle icon'></i>
+          <span class="tituloBtn">Cerrar Sesión</span>
+        </a>
+      </div>
+
     </button>
   </div>
 </body>
