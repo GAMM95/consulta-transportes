@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Kanit:wght@400;500;600&family=Lobster+Two:wght@400;700&family=Montserrat:wght@300;500;800&family=PT+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Kanit:wght@400;500;600&family=Lobster+Two:wght@400;700&family=Montserrat:wght@300;500;800&family=PT+Sans&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  transition: .3s ease;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s ease;
 }
 
 /* Estilo de colores por defecto */
@@ -26,8 +26,8 @@
   --h2FontSize: 1.25rem;
   --h3FontSize: 1rem;
   --normalFontSize: 0.938rem;
-  --smallFontSize: .813rem;
-  --smallestFontSize: .75rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
 }
 
 .sideBar {
@@ -47,9 +47,9 @@
 
 img {
   max-width: 8rem;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   border-radius: 2px;
-  padding: .2rem;
+  padding: 0.2rem;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -63,14 +63,14 @@ img {
 }
 
 .listItem {
-  padding: .2rem 1.5rem;
+  padding: 0.2rem 1.5rem;
   width: 100%;
   position: relative;
 }
 
 .listItem::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 0%;
   left: 0;
   width: 5px;
@@ -87,7 +87,7 @@ img {
 }
 
 .icon {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 /* .listItem:hover,
@@ -103,13 +103,20 @@ img {
 
 .listItem:hover::before {
   height: 100%;
-  transition: .3s ease
+  transition: 0.3s ease;
 }
-
 
 h3 {
   font-size: var(--h3FontSize);
   color: var(--textColor);
   padding-bottom: 1rem;
+}
 
+.logpout {
+  align-items: center;
+  justify-content: center;
+}
+
+a{
+  color: var(--textColor);
 }

@@ -13,23 +13,18 @@
   <div class="topSection">
     <div class="headerSection flex">
       <div class="titulo">
-        <h2>Bienvenido, <?php echo $_SESSION['username']; ?>!</h2>
-      </div>
-
-      <div class="logout">
-        <a href="logout.php">
-          <i class='bx bx-log-out-circle icon'></i>
-          Cerrar sesión
-        </a> <!-- Agrega un enlace para cerrar sesión -->
+        <h2>Bienvenido,
+          <?php echo $_SESSION['username']; ?>!
+        </h2>
       </div>
     </div>
 
     <div class="cardSection flex">
       <div class="rightCard flex">
-        
+
       </div>
     </div>
-
+x
   </div>
 </body>
 

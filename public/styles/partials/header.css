@@ -16,8 +16,8 @@
   --h2FontSize: 1.25rem;
   --h3FontSize: 1rem;
   --normalFontSize: 0.938rem;
-  --smallFontSize: .813rem;
-  --smallestFontSize: .75rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
 }
 
 .headerSection {
@@ -27,4 +27,10 @@
 h2 {
   color: var(--blackColor);
   font-weight: 700;
+}
+
+.topSection {
+  background: var(--hoverColor);
+  height: auto;
+  width: 100%;
 }
