@@ -136,3 +136,8 @@ a {
   margin-bottom: 2px;
   padding: 0;
 }
+
+/* Estilo para el ítem seleccionado en el sidebar */
+.listItem.selected {
+  background-color: #f0f0f0; /* Cambia este color al que desees */
+}
