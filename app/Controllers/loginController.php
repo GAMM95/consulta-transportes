@@ -33,7 +33,7 @@ class LoginController
                 // Si el inicio de sesión es exitoso, inicia la sesión y redirige al menú
                 session_start();
                 $_SESSION['username'] = $username;
-                header("Location: menu.php");
+                header("Location: inicio.php");
                 exit();
             } else {
                 // Si el inicio de sesión falla, muestra un mensaje de error

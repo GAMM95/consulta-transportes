@@ -30,15 +30,16 @@
         Menu
       </h3>
       <ul class="menuList grid">
+
         <!-- Item Inicio -->
         <li class="listItem">
-          <a href="menu.php" class="menuLink flex">
+          <a href="inicio.php" class="menuLink flex">
             <i class='bx bxs-home icon'></i>
             <span class="smallText">Inicio</span>
           </a>
         </li>
 
-        <!-- Item Trajetas de circulacion -->
+        <!-- Item Tarjetas de circulacion -->
         <li class="listItem">
           <a href="/app/Views/inicio.php" class="menuLink flex">
             <i class='bx bxs-id-card icon '></i>
@@ -46,7 +47,7 @@
           </a>
         </li>
 
-        <!-- Item Vehiculos -->
+        <!-- Item Papeletas -->
         <li class="listItem">
           <a href="papeletas.php" class="menuLink flex">
             <i class='bx bxs-notepad icon'></i>
@@ -54,7 +55,7 @@
           </a>
         </li>
 
-        <!-- Item Transportes -->
+        <!-- Item Paraderos -->
         <li class="listItem">
           <a href="transportes.php" class="menuLink flex">
             <i class='bx bxs-car icon'></i>
