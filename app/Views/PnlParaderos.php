@@ -8,6 +8,7 @@
   <!-- Enlaces a las hojas de estilo -->
   <link rel="stylesheet" href="./public/styles/appMenu.css">
   <link rel="stylesheet" href="./public/styles/partials/body.css">
+  <link rel="stylesheet" href="./public/styles/paraderos.css">
 
   <!-- Importacion de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -17,12 +18,15 @@
 <body>
   <!-- Contenedor principal -->
   <div class="mainContent">
-    
+
     <!-- Incluir el encabezado desde un archivo externo -->
     <?php
     include("app/Views/partials/header.php");
     ?>
-    <h3>Aqui iran las consultas de los paraderos</h3>
+
+    <div class="paraderos_content">
+      <h3>Consulta de Paraderos Formales</h3>
+    </div>
   </div>
 </body>
 

@@ -3,6 +3,8 @@
 <!-- Enlaces a las hojas de estilo -->
 <link rel="stylesheet" href="./public/styles/appMenu.css">
 <link rel="stylesheet" href="./public/styles/partials/header.css">
+<link rel="stylesheet" href="./public/styles/partials/body.css">
+
 
 <!-- Importacion de iconos -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>

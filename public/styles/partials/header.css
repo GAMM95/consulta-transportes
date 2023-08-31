@@ -20,8 +20,16 @@
   --smallestFontSize: 0.75rem;
 }
 
+body{
+  width: 100%;
+}
+
 .headerSection {
   justify-content: space-between;
+  width: 82%;
+  height: 100%;
+  padding: 2rem;
+  overflow: auto;
 }
 
 h2 {
@@ -31,6 +39,7 @@ h2 {
 
 .topSection {
   background: var(--hoverColor);
-  height: auto;
+  /* height: auto; */
   width: 100%;
 }
+

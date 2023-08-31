@@ -1,3 +1,7 @@
+<!-- Archivo: login.php -->
+
+<!-- Documento HTML para la página de inicio de sesión de Consulta Transportes -->
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,7 +16,7 @@
   <link rel="stylesheet" href="./public/styles/login.css">
   <link rel="stylesheet" href="./public/styles/login_responsive.css">
 
-  <!-- Importacion de libreria jquery -->
+  <!-- Importacion de libreria jQuery -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
@@ -77,23 +81,22 @@
             <div class="input flex">
               <i class='bx bxs-lock icon-input icon'></i>
               <input type="password" id="password" placeholder="Ingrese su contraseña" name="password" required />
+              <!-- Icono para mostrar/ocultar contraseña -->
               <div id="togglePassword" class="show-hide-link icon"><i class='bx bx-show icon'></i></div>
             </div>
           </div>
-
 
           <!-- Botón de inicio de sesión -->
           <button type='submit' class='btn btn-form  flex' name='btnIniciarSesion' content='Iniciar Sesión'>
             <span>Iniciar Sesión</span>
           </button>
-
         </form>
       </div>
     </div>
   </div>
 
-  <!-- <script>
-    // password-toggle.js
+  <!-- Script para mostrar/ocultar contraseña -->
+  <script>
     const passwordInput = document.getElementById('password');
     const togglePassword = document.getElementById('togglePassword');
     let passwordVisible = false;
@@ -108,8 +111,7 @@
       }
       passwordVisible = !passwordVisible;
     });
-  </script> -->
-
+  </script>
 </body>
 
 </html>

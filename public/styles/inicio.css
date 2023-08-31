@@ -1,9 +1,14 @@
-.mainContent {
+.inicio_content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 82%;
   height: 100%;
   overflow: auto;
+  padding: 2rem;
+}
+
+.img_inicio {
+  width: 100%;
 }
