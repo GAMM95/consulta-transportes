@@ -20,6 +20,7 @@
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+  <script src="../app/Views/funciones/password-toggle.js"></script>
 
   <!-- Importacion de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -91,6 +92,24 @@
       </div>
     </div>
   </div>
+
+  <script>
+    // password-toggle.js
+    const passwordInput = document.getElementById('password');
+    const togglePassword = document.getElementById('togglePassword');
+    let passwordVisible = false;
+
+    togglePassword.addEventListener('click', () => {
+      if (passwordVisible) {
+        passwordInput.type = 'password';
+        togglePassword.innerHTML = "<i class='bx bx-show'></i>";
+      } else {
+        passwordInput.type = 'text';
+        togglePassword.innerHTML = "<i class='bx bx-hide'></i>";
+      }
+      passwordVisible = !passwordVisible;
+    });
+  </script>
 </body>
 
 </html>
