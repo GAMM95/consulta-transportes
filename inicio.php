@@ -30,7 +30,7 @@ if (!isset($_SESSION['username'])) {
     ?>
     <?php
     // Incluir el cuerpo de la página desde un archivo externo
-    include("app/Views/inicio.php");
+    include("app/Views/PnlInicio.php");
     ?>
   </div>
 </body>

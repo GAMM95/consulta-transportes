@@ -22,8 +22,7 @@
     <?php
     include("app/Views/partials/header.php");
     ?>
-    <h3>Aqui ira el panel de inicio</h3>
-   <img src="/app/public/" alt="">
+    <h3>Aqui irán las consultas de las tarjetas de circulacion</h3>
   </div>
 </body>
 

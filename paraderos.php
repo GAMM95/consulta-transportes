@@ -27,7 +27,7 @@ if (!isset($_SESSION['username'])) {
     ?>
     <?php
     // Incluir el cuerpo de la página desde un archivo externo
-    include("./app/Views/paraderos.php");
+    include("app/Views/PnlParaderos.php");
     ?>
   </div>
 </body>

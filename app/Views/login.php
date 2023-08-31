@@ -79,9 +79,11 @@
             <label for="password">Contraseña</label>
             <div class="input flex">
               <i class='bx bxs-lock icon-input icon'></i>
-              <input type='password' id='password' placeholder='Ingrese su contraseña' name='password' required />
+              <input type="password" id="password" placeholder="Ingrese su contraseña" name="password" required />
+              <div id="togglePassword" class="show-hide-link icon"><i class='bx bx-show icon'></i></div>
             </div>
           </div>
+
 
           <!-- Botón de inicio de sesión -->
           <button type='submit' class='btn btn-form  flex' name='btnIniciarSesion' content='Iniciar Sesión'>

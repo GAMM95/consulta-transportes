@@ -27,7 +27,7 @@ if (!isset($_SESSION['username'])) {
     ?>
     <?php
     // Incluir el cuerpo de la página desde un archivo externo
-    include("app/Views/tarjetaCirculacion.php");
+    include("app/Views/PnlTarjetaDeCirculacion.php");
     ?>
   </div>
 </body>

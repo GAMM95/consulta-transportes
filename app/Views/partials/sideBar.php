@@ -41,7 +41,7 @@
 
         <!-- Item Tarjetas de circulacion -->
         <li class="listItem">
-          <a href="/app/Views/inicio.php" class="menuLink flex">
+          <a href="tarjetaDeCirculacion.php" class="menuLink flex">
             <i class='bx bxs-id-card icon '></i>
             <span class="smallText">Tarjetas de circulación</span>
           </a>
@@ -57,7 +57,7 @@
 
         <!-- Item Paraderos -->
         <li class="listItem">
-          <a href="transportes.php" class="menuLink flex">
+          <a href="paraderos.php" class="menuLink flex">
             <i class='bx bxs-car icon'></i>
             <span class="smallText">Paraderos</span>
           </a>

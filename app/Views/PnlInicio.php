@@ -22,7 +22,8 @@
     <?php
     include("app/Views/partials/header.php");
     ?>
-    <h3>Aqui iran las consultas de las tarjetas de circulacion</h3>
+    <h3>Aqui ira el panel de inicio</h3>
+   <img src="./public/assets/fondo.png" alt="">
   </div>
 </body>
 
