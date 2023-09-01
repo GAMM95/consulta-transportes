@@ -33,7 +33,7 @@
       </div>
 
       <div class="cards flex">
-        
+        <!-- <img src="./public/assets/fondo.png" alt="" class="img_inicio"> -->
       </div>
     </div>
 

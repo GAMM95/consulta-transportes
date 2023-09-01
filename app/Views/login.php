@@ -61,7 +61,7 @@
       <div class="formDiv flex">
         <!-- Encabezado y logo -->
         <div class="headerDiv">
-          <img src="public/assets/image.png" alt="imagen de mde" />
+          <img src="public/assets/image.png" alt="imagen de mde" class="img_logo_login" />
           <h3>Bienvenido</h3>
         </div>
 

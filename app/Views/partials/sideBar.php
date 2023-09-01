@@ -22,13 +22,13 @@
 
     <!-- División para el logo -->
     <div class="logoDiv flex">
-      <img src="public/assets/image.png" alt="Imagen logo MDE">
+      <img src="public/assets/image.png" alt="Imagen logo MDE" class="img_logo">
     </div>
 
     <!-- División del menú -->
     <div class="menuDiv">
       <h3 class="divTitulo">
-        Menu
+        Consultas
       </h3>
       <ul class="menuList grid">
 

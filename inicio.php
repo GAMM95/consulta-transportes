@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Página de menú principal para el sistema de Consulta de Transportes.
  *

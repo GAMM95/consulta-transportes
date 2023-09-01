@@ -6,9 +6,14 @@
   width: 82%;
   height: 100%;
   overflow: auto;
-  padding: 2rem;
+  padding:0 2rem 0 2rem ;
 }
 
-.img_inicio {
-  width: 100%;
+.img_dashboard {
+  width: 80%;
+  height: auto;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
 }
+

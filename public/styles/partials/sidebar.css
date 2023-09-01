@@ -11,6 +11,7 @@
 /* Estilo de colores por defecto */
 :root {
   --primaryColor: hsl(94, 59%, 35%);
+  /* --primaryColor: hsl(122, 52%, 58%); */
   --hoverColor: #bdf094;
   --paleGreen: hsl(96, 75%, 89%);
   --whiteColor: hsl(0, 0%, 100%);
@@ -45,7 +46,7 @@
   align-content: center;
 }
 
-img {
+.img_logo {
   max-width: 8rem;
   margin-right: 0.5rem;
   border-radius: 2px;
