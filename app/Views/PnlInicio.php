@@ -25,8 +25,16 @@
     ?>
 
     <div class="inicio_content">
-      <h3>Aqui ira el panel de inicio</h3>
-      <img src="./public/assets/fondo.png" alt="" class="img_inicio">
+      <!-- <h3>Aqui ira el panel de inicio</h3> -->
+
+      <!-- imagenes del fondo del dashboard -->
+      <div class="img_dashboard">
+        <img src="./public/assets/fondo.png" alt="" class="img_inicio">
+      </div>
+
+      <div class="cards flex">
+        
+      </div>
     </div>
 
   </div>

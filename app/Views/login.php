@@ -22,7 +22,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
   <!-- Implementacion de funcionalidades para la vista cliente -->
-  <script src="/app/Views/funciones/password-toggle.js"></script>
+  <script src="app/Views/funciones/password-toggle.js"></script>
 
   <!-- Importacion de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -94,24 +94,7 @@
       </div>
     </div>
   </div>
-
-  <!-- Script para mostrar/ocultar contraseña -->
-  <script>
-    const passwordInput = document.getElementById('password');
-    const togglePassword = document.getElementById('togglePassword');
-    let passwordVisible = false;
-
-    togglePassword.addEventListener('click', () => {
-      if (passwordVisible) {
-        passwordInput.type = 'password';
-        togglePassword.innerHTML = "<i class='bx bx-show'></i>";
-      } else {
-        passwordInput.type = 'text';
-        togglePassword.innerHTML = "<i class='bx bx-hide'></i>";
-      }
-      passwordVisible = !passwordVisible;
-    });
-  </script>
+  
 </body>
 
 </html>
