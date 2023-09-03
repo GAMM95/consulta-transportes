@@ -8,3 +8,21 @@
   overflow: auto;
   padding: 2rem;
 }
+
+.form {
+  gap: 1rem;
+}
+
+input {
+  background: none;
+  outline: none;
+  border: none;
+  width: 250px;
+}
+/* Estilos para el contenedor de los campos de entrada */
+.input {
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--inputColor);
+  border-radius: 10px;
+}

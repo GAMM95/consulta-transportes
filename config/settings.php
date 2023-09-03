@@ -5,10 +5,10 @@
 define("USUARIO", "sa");
 
 // Contraseña para la conexión a la base de datos
-define("PASSWORD", "S0p0rt3");
+define("PASSWORD", "sql");
 
 // Nombre de la base de datos
 define("DATABASE", "TRANSPORTE");
 
 // Dirección del servidor de la base de datos
-define("SERVIDOR", "INF05");
+define("SERVIDOR", "JHONATANMM");

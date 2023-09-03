@@ -1,8 +1,8 @@
 <?php
-// require_once '../app/Models/Usuario.php';
+// Incluye el archivo que define la clase Usuario
 require_once 'app/Models/Usuario.php';
 
-
+// Clase LoginController: controlador para la gestión del inicio de sesión
 class LoginController
 {
     /**
@@ -10,7 +10,7 @@ class LoginController
      */
     public function mostrarFormLogin()
     {
-        // require_once '../app/Views/login.php';
+        // Incluye la vista del formulario de inicio de sesión
         require_once 'app/Views/login.php';
     }
 
@@ -37,7 +37,7 @@ class LoginController
                 exit();
             } else {
                 // Si el inicio de sesión falla, muestra un mensaje de error
-                echo "verifica tus credenciales";
+                echo "Verifica tus credenciales.";
                 // $_SESSION['login_message'] = 'Inicio de sesión fallido. Verifica tus credenciales.';
                 header("Location: index.php?state=failed");
                 // exit();

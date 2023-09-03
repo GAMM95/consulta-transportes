@@ -5,12 +5,16 @@ if (!isset($_SESSION['username'])) {
   header("Location: index.php"); // Redirigir a la página de inicio de sesión si no hay sesión iniciada
   exit();
 }
+
+// Importar el controlador necesario
+require_once 'app/Controllers/PapeletaController.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="public/assets/logo.ico" />
@@ -19,8 +23,9 @@ if (!isset($_SESSION['username'])) {
   <link rel="stylesheet" href="./public/styles/appMenu.css">
   <title>Consulta Transportes</title>
 </head>
+
 <body>
-<div class="container">
+  <div class="container">
     <?php
     // Incluir la barra lateral desde un archivo externo
     include("app/Views/partials/sideBar.php");
@@ -31,4 +36,5 @@ if (!isset($_SESSION['username'])) {
     ?>
   </div>
 </body>
+
 </html>

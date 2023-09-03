@@ -91,12 +91,6 @@
   margin-right: 0.5rem;
 }
 
-/* .listItem:hover,
-.menuLink {
-  color: var(--primaryColor);
-  transition: 0;
-} */
-
 .menuLink:hover {
   color: var(--primaryColor);
   transition: 0;
@@ -138,7 +132,8 @@ a {
   padding: 0;
 }
 
-/* Estilo para el ítem seleccionado en el sidebar */
-.listItem.selected {
-  background-color: #f0f0f0; /* Cambia este color al que desees */
-}
+/* Estilos para el ítem seleccionado
+.menuLink.selected {
+  background-color: #007bff; /* Cambia el color de fondo a tu elección */
+  /* color: #571a1a; /* Cambia el color del texto a tu elección */
+/* } 

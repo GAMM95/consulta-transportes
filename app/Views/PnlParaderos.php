@@ -26,6 +26,14 @@
 
     <div class="paraderos_content">
       <h3>Consulta de Paraderos Formales</h3>
+
+      <form action="#" method="GET" class="form ">
+        <div class="input flex">
+          <input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
+          <button type="submit">Buscar</button>
+        </div>
+      </form>
+
     </div>
   </div>
 </body>

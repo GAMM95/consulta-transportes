@@ -13,7 +13,7 @@
   <!-- Importacion de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>Consulta Transportes</title>
-  
+
 </head>
 
 <body>
@@ -67,16 +67,50 @@
       </ul>
     </div>
 
-    <button class="logout btn">
-      <div class="log">
-        <a href="logout.php">
-          <i class='bx bx-log-out-circle icon'></i>
-          <span class="tituloBtn">Cerrar Sesión</span>
-        </a>
-      </div>
 
-    </button>
+    <!-- División del menú -->
+    <div class="menuDiv">
+      <ul class="menuList grid">
+
+        <div class="log flex">
+
+          <button class="logout btn">
+            <a href="logout.php">
+              <i class='bx bx-log-out-circle icon'></i>
+              <span class="tituloBtn">Cerrar Sesión</span>
+            </a>
+          </button>
+        </div>
+
+
+      </ul>
+    </div>
+
+
   </div>
+
+
+<!-- Agrega el siguiente script al final de tu archivo HTML justo antes de cerrar el body -->
+<script>
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   // Obtén todos los elementos de la lista del menú
+  //   const menuItems = document.querySelectorAll('.menuLink');
+
+  //   // Agrega un evento click a cada elemento del menú
+  //   menuItems.forEach((item) => {
+  //     item.addEventListener('click', () => {
+  //       // Elimina la clase 'selected' de todos los elementos del menú
+  //       menuItems.forEach((otherItem) => {
+  //         otherItem.classList.remove('selected');
+  //       });
+
+  //       // Agrega la clase 'selected' solo al elemento seleccionado
+  //       item.classList.add('selected');
+  //     });
+  //   });
+  // });
+</script>
+
 </body>
 
 </html>

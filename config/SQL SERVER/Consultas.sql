@@ -17,7 +17,7 @@ SELECT count(*) FROM UNIDAD;
 SELECT count(*) FROM ASOCIACION;
 
 /* Cantidad de papeletas no pagadas */
-SELECT * FROM PAPELETA 
+SELECT count(*) FROM PAPELETA 
 WHERE PAP_fechapago IS NULL;
 
 
