@@ -11,4 +11,4 @@ define("PASSWORD", "sql");
 define("DATABASE", "TRANSPORTE");
 
 // Dirección del servidor de la base de datos
-define("SERVIDOR", "localhost");
+define("SERVIDOR", "JHONATANMM");

@@ -136,7 +136,7 @@ p {
 }
 
 /* Estilos para la imagen de logo */
-img {
+.img_logo_login {
   width: 30%;
   padding-bottom: 0.125rem;
 }

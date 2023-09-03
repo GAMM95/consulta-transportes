@@ -1,12 +1,10 @@
 .mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 82%;
   height: 100%;
-  padding: 2rem;
-  overflow: auto;
-}
-
-.bottom {
-  margin-top: 2rem;
-  gap: 2rem;
-  align-items: flex-start;
+  overflow: hidden;
+  position: relative;
 }

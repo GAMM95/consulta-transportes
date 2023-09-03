@@ -1,0 +1,10 @@
+.papeletas_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 82%;
+  height: 100%;
+  overflow: auto;
+  padding: 2rem;
+}

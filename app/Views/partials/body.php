@@ -17,21 +17,14 @@
 <body>
   <!-- Contenedor principal -->
   <div class="mainContent">
-
+    
     <!-- Incluir el encabezado desde un archivo externo -->
     <?php
-    include("app/Views/partials/header.php");
+    // include("app/Views/partials/header.php");
     ?>
+    
+    
 
-    <!-- Contenedor inferior -->
-    <div class="bottom flex">
-
-      <!-- Incluir el pie de página desde un archivo externo -->
-      <?php
-      include("app/Views/partials/footer.php");
-      ?>
-
-    </div>
   </div>
 </body>
 

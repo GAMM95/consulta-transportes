@@ -1,13 +1,11 @@
 <?php
-// require_once '../config/conexion.php';
 require_once 'config/conexion.php';
-
 
 class Usuario
 {
-  private $conector = null;
-  protected $username; // Almacena el nombre de usuario proporcionado
-  protected $password; // Almacena la contraseña proporcionada
+  private $conector;
+  protected $username;
+  protected $password;
 
   /**
    * Constructor de la clase Usuario.
@@ -16,10 +14,9 @@ class Usuario
    */
   public function __construct($username, $password)
   {
-    $conexion = new conexion(); // Crea una instancia de la clase de conexión
-    $this->conector = $conexion->getConexion(); // Obtiene la conexión a la base de datos
-    $this->username = $username; // Asigna el nombre de usuario al atributo protegido
-    $this->password = $password; // Asigna la contraseña al atributo protegido
+    $this->conector = (new Conexion())->getConexion(); // Obtén la conexión a la base de datos directamente
+    $this->username = $username;
+    $this->password = $password;
   }
 
   /**
@@ -28,12 +25,12 @@ class Usuario
    */
   public function iniciarSesion()
   {
-    $query = "SELECT * FROM USUARIO_APLICATIVO WHERE USU_usuario= :username AND USU_password = :password";
+    $query = "EXEC SP_Usuario_Aplicativo_Validar :username, :password";
     $stmt = $this->conector->prepare($query);
-    $stmt->bindParam(':username', $this->username); // Vincula el nombre de usuario
-    $stmt->bindParam(':password', $this->password); // Vincula la contraseña
-    $stmt->execute(); // Ejecuta la consulta
+    $stmt->bindParam(':username', $this->username);
+    $stmt->bindParam(':password', $this->password);
+    $stmt->execute();
 
-    return $stmt->fetch() !== false; // Retorna true si hay resultados, o false si no los hay
+    return $stmt->fetch() !== false;
   }
 }

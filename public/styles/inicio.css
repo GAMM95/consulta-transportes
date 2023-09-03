@@ -1,0 +1,91 @@
+.inicio_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 82%;
+  height: 100%;
+  overflow: overlay;
+  padding:0 2rem 0 2rem ;
+}
+
+.img_dashboard {
+  width: 80%;
+  /* height: auto; */
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 80%;
+  height: 80%;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  border-radius: 1rem;
+  transition: opacity 0.5s ease-in-out;
+  /* Agrega una transición suave de 0.5 segundos */
+}
+
+.carousel img.hidden {
+  opacity: 0;
+}
+
+.sectionCard {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea */
+  justify-content: space-between; /* Distribuye las tarjetas equitativamente en el espacio disponible */
+  gap: 20px; /* Establece el margen entre las tarjetas */
+  margin-bottom: 20px;
+}
+
+.card {
+  flex: 1; /* Para que las tarjetas ocupen un espacio igual en la fila */
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 0; /* Quita el margen inferior para evitar que se acumule con el margen superior de la siguiente tarjeta */
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+
+.img_dashboard {
+  /* background-image: url('./public/assets/fondo.png'); */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen horizontal y verticalmente */
+  height: 82%; /* Ajusta la altura deseada para el panel */
+  /* Otras propiedades de estilo para el panel si es necesario */
+}

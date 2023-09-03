@@ -1,3 +1,7 @@
+<!-- Archivo: login.php -->
+
+<!-- Documento HTML para la página de inicio de sesión de Consulta Transportes -->
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,14 +16,13 @@
   <link rel="stylesheet" href="./public/styles/login.css">
   <link rel="stylesheet" href="./public/styles/login_responsive.css">
 
-  <!-- Importacion libreria SweetAlert2 -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-  <!-- Importacion de libreria jquery -->
+  <!-- Importacion de libreria jQuery -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+  <!-- Implementacion de funcionalidades para la vista cliente -->
+  <script src="app/Views/funciones/password-toggle.js"></script>
 
   <!-- Importacion de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -50,7 +53,6 @@
       if ($state === 'failed') {
         echo "<script>
             toastr.error('Credenciales incorrectas.', 'Inicio de Sesión Fallido.');
-
             </script>";
       }
       ?>
@@ -59,7 +61,7 @@
       <div class="formDiv flex">
         <!-- Encabezado y logo -->
         <div class="headerDiv">
-          <img src="public/assets/image.png" alt="imagen de mde" />
+          <img src="public/assets/image.png" alt="imagen de mde" class="img_logo_login" />
           <h3>Bienvenido</h3>
         </div>
 
@@ -78,7 +80,9 @@
             <label for="password">Contraseña</label>
             <div class="input flex">
               <i class='bx bxs-lock icon-input icon'></i>
-              <input type='password' id='password' placeholder='Ingrese su contraseña' name='password' required />
+              <input type="password" id="password" placeholder="Ingrese su contraseña" name="password" required />
+              <!-- Icono para mostrar/ocultar contraseña -->
+              <div id="togglePassword" class="show-hide-link icon"><i class='bx bx-show icon'></i></div>
             </div>
           </div>
 
@@ -86,11 +90,11 @@
           <button type='submit' class='btn btn-form  flex' name='btnIniciarSesion' content='Iniciar Sesión'>
             <span>Iniciar Sesión</span>
           </button>
-
         </form>
       </div>
     </div>
   </div>
+  
 </body>
 
 </html>
