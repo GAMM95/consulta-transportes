@@ -1,5 +1,5 @@
-/* .inicio {
-  background: center / cover url('public/assets/fondo.png');
+.inicio_content {
+  background: center / cover url('../assets/fondo.png');
   background-color: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
   min-height: calc(100vh + var(--header-height));
   display: flex;
@@ -7,9 +7,9 @@
   position: relative;
 }
 
-.inicio::before {
+.inicio_content::before {
   position: absolute;
-  background: rgba(0, 0, 0, 0.20);
+  background: rgba(0, 0, 0, 0.60);
   content: '';
   left: 0;
   top: 0;
@@ -17,18 +17,17 @@
   height: 100%;
 }
 
-.inicio .inicio_content,
-.inicio_content {
+.sectionCard {
   position: relative;
   z-index: 1;
-} */
+}
 
 .inicio_content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
+  width: 100%;
   height: 100%;
   overflow: overlay;
   /* padding:0 2rem 0 2rem ;*/
@@ -76,7 +75,7 @@
   /* Permite que las tarjetas se envuelvan a la siguiente línea */
   justify-content: space-between;
   /* Distribuye las tarjetas equitativamente en el espacio disponible */
-  gap: 20px;
+  gap: 2rem;
   /* Establece el margen entre las tarjetas */
   margin-bottom: 20px;
 }

@@ -24,7 +24,7 @@
     <?php
     // include("app/Views/partials/header.php");
     ?>
-    
+
     <div class="topSection">
       <div class="headerSection flex">
         <div class="titulo">
@@ -43,6 +43,7 @@
 
       </div>
     </div>
+  </div>
 </body>
 
 </html>
