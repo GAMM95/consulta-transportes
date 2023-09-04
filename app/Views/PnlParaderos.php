@@ -19,28 +19,32 @@
 <body>
   <!-- Contenedor principal -->
   <div class="mainContent">
-    <!-- <section class="paraderos"> -->
-      <div class="topSection">
-        <div class="headerSection flex">
-          <div class="titulo">
-            <h2>
-              Consulta de Paraderos Formales
-            </h2>
-          </div>
+    <div class="topSection">
+      <div class="headerSection flex">
+        <div class="titulo">
+          <h2>
+            Consulta de Paraderos Formales
+          </h2>
         </div>
       </div>
+    </div>
 
-      <div class="paraderos_content">
-        <form action="#" method="GET" class="form ">
-          <div class="input flex">
-            <input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
-            <button type="submit" class='btn btn-form  flex'>Buscar</button>
-          </div>
-        </form>
+    <div class="paraderos_content">
+      <form action="#" method="GET" class="form ">
+        <div class="input flex">
+          <input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
+          <button type="submit" class='btn btn-form  flex'>Buscar</button>
+        </div>
+      </form>
 
+
+    </div>
+
+    <div class="tabla">
+        <?php
+        include("app/Views/partials/tablaConsultarParaderos.php");
+        ?>
       </div>
-    <!-- </section> -->
-
   </div>
 </body>
 

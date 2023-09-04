@@ -18,15 +18,12 @@ h2 {
 }
 
 .paraderos_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* width: 82%; */
-  height: 100%;
-  overflow: auto;
-  padding: 2rem;
-  /* top: 0; */
+  /* height: 100%; */
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
 }
 
 .form {
@@ -42,7 +39,17 @@ input {
 /* Estilos para el contenedor de los campos de entrada */
 .input {
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 0.4rem;
   background: var(--inputColor);
   border-radius: 10px;
+  width: 20rem;
+  /* margin-right: 4rem; */
+}
+
+.tabla {
+  overflow: auto;
+  width: 100%;
+  padding: 0 2rem;
+  margin-top: 1rem;
+  height: 100%;
 }

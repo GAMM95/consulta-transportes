@@ -17,13 +17,11 @@ h2 {
   width: 100%;
 }
 .papeletas_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  overflow: auto;
-  padding: 2rem;
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
 }
 
 .form {
@@ -39,7 +37,8 @@ input {
 /* Estilos para el contenedor de los campos de entrada */
 .input {
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 0.4rem;
   background: var(--inputColor);
   border-radius: 10px;
+  width: 20rem;
 }
