@@ -132,6 +132,7 @@ h3 {
 
 .btn .icon {
   margin-left: .5rem;
+  padding-block: .4rem;
 }
 
 .logout:hover {
@@ -147,6 +148,7 @@ h3 {
 
 a {
   color: var(--textColor);
+  display: flex;
 }
 
 .tituloBtn {
@@ -156,8 +158,3 @@ a {
   padding: 0;
 }
 
-/* Estilos para el ítem seleccionado
-.menuLink.selected {
-  background-color: #007bff; /* Cambia el color de fondo a tu elección */
-  /* color: #571a1a; /* Cambia el color del texto a tu elección */
-/* } 

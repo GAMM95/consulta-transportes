@@ -1,4 +1,4 @@
-.inicio {
+/* .inicio {
   background: center / cover url('public/assets/fondo.png');
   background-color: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
   min-height: calc(100vh + var(--header-height));
@@ -21,7 +21,7 @@
 .inicio_content {
   position: relative;
   z-index: 1;
-}
+} */
 
 .inicio_content {
   display: flex;
@@ -34,16 +34,7 @@
   /* padding:0 2rem 0 2rem ;*/
 }
 
-.inicio_content{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 82%;
-  height: 100%;
-  overflow: auto;
-  padding: 2rem;
-}
+
 
 /* .img_dashboard {
   width: 80%;
