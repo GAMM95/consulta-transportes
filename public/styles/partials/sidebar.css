@@ -108,13 +108,37 @@ h3 {
 }
 
 .logout {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 1.2rem;
-  width: 80%;
-  justify-content: space-around;
-  background: var(--paleGreen);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--inputColor);
+  padding: .8rem 1rem;
+  color: var(--textColor);
+  justify-content: center;
+  margin: 0 2rem 0 2rem;
 }
+
+
+/* .logout {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--inputColor);
+  padding: .8rem 1rem;
+  color: var(--textColor);
+} */
+
+.btn .icon {
+  margin-left: .5rem;
+}
+
+.logout:hover {
+  background: var(--paleGreen);
+  color: var(--primaryColor);
+}
+
 
 .log {
   display: flex;

@@ -1,66 +1,112 @@
+.inicio {
+  background: center / cover url('public/assets/fondo.png');
+  background-color: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
+  min-height: calc(100vh + var(--header-height));
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.inicio::before {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.20);
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.inicio .inicio_content,
 .inicio_content {
+  position: relative;
+  z-index: 1;
+}
+
+.inicio_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  height: 100%;
+  overflow: overlay;
+  /* padding:0 2rem 0 2rem ;*/
+}
+
+.inicio_content{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 82%;
   height: 100%;
-  overflow: overlay;
-  padding:0 2rem 0 2rem ;
+  overflow: auto;
+  padding: 2rem;
 }
 
-.img_dashboard {
+/* .img_dashboard {
   width: 80%;
-  /* height: auto; */
   justify-content: center;
   flex-direction: column;
   display: flex;
-}
+} */
 
-.carousel-container {
+/* .carousel-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 2px;
-}
+} */
 
-.carousel {
+/* .carousel {
   display: flex;
   overflow: hidden;
   width: 80%;
   height: 80%;
-}
+} */
 
-.carousel img {
+/* .carousel img {
   width: 100%;
   height: auto;
   opacity: 1;
   border-radius: 1rem;
   transition: opacity 0.5s ease-in-out;
-  /* Agrega una transición suave de 0.5 segundos */
-}
+  Agrega una transición suave de 0.5 segundos
+} */
 
-.carousel img.hidden {
+/* .carousel img.hidden {
   opacity: 0;
-}
+} */
 
 .sectionCard {
   display: flex;
-  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea */
-  justify-content: space-between; /* Distribuye las tarjetas equitativamente en el espacio disponible */
-  gap: 20px; /* Establece el margen entre las tarjetas */
+  flex-wrap: wrap;
+  /* Permite que las tarjetas se envuelvan a la siguiente línea */
+  justify-content: space-between;
+  /* Distribuye las tarjetas equitativamente en el espacio disponible */
+  gap: 20px;
+  /* Establece el margen entre las tarjetas */
   margin-bottom: 20px;
 }
 
+.grid_Card {
+  display: grid;
+  align-items: center;
+  /* gap: 0rem; */
+}
+
 .card {
-  flex: 1; /* Para que las tarjetas ocupen un espacio igual en la fila */
+  flex: 1;
+  /* Para que las tarjetas ocupen un espacio igual en la fila */
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   max-width: 300px;
   padding: 20px;
   text-align: center;
-  margin-bottom: 0; /* Quita el margen inferior para evitar que se acumule con el margen superior de la siguiente tarjeta */
+  margin-bottom: 0;
+  /* Quita el margen inferior para evitar que se acumule con el margen superior de la siguiente tarjeta */
 }
 
 .card img {
@@ -75,17 +121,20 @@
 }
 
 .card p {
-  font-size: 16px;
+  font-size: 2rem;
   color: #777;
-  margin-bottom: 20px;
+  margin-bottom: .2rem;
 }
-
 
 .img_dashboard {
   /* background-image: url('./public/assets/fondo.png'); */
-  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-position: center; /* Centra la imagen horizontal y verticalmente */
-  height: 82%; /* Ajusta la altura deseada para el panel */
+  background-size: cover;
+  /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  background-position: center;
+  /* Centra la imagen horizontal y verticalmente */
+  height: 82%;
+  /* Ajusta la altura deseada para el panel */
   /* Otras propiedades de estilo para el panel si es necesario */
 }

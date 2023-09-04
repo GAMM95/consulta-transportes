@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Obtén referencias a los elementos HTML
   const carousel = document.querySelector('.carousel');
   // Array con las rutas de las imágenes
-  const images = ['./public/assets/fondo.png', './public/assets/fondo.png'];
+  const images = ['./public/assets/fondo.png', './public/assets/home.jpg'];
   let currentIndex = 0;
 
   // Función para mostrar la imagen actual

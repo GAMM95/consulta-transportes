@@ -42,8 +42,8 @@
 
         <!-- Texto descriptivo -->
         <div class="textDiv">
-          <h2 class='titulo'>SubGerencia de Transportes</h2>
-          <p>Sistema de consultas de transportes</p>
+          <h2 class='titulo'>SubGerencia de Transporte, Tránsito y Seguridad Vial</h2>
+          <p>Sistema de consultas</p>
         </div>
       </div>
 
@@ -87,14 +87,14 @@
           </div>
 
           <!-- Botón de inicio de sesión -->
-          <button type='submit' class='btn btn-form  flex' name='btnIniciarSesion' content='Iniciar Sesión'>
+          <button type='submit' class='btn btn-form flex' name='btnIniciarSesion' content='Iniciar Sesión'>
             <span>Iniciar Sesión</span>
           </button>
         </form>
       </div>
     </div>
   </div>
-  
+
 </body>
 
 </html>

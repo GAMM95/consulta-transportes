@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="topSection">
+  <section class="topSection">
     <div class="headerSection flex">
       <div class="titulo">
         <h2>Bienvenido,
@@ -27,5 +27,5 @@
       </div>
     </div> -->
 
-  </div>
+  </section>
 </body>

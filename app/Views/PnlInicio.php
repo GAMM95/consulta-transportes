@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./public/styles/inicio.css">
 
   <!-- Implementacion de funcionalidades para la vista cliente -->
-  <script src="app/Views/funciones/carrusel.js"></script>
+  <!-- <script src="app/Views/funciones/carrusel.js"></script> -->
 
   <!-- Importacion de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -26,48 +26,49 @@
     <?php
     include("app/Views/partials/header.php");
     ?>
+    <section class="inicio">
+      <div class="inicio_content">
 
-    <div class="inicio_content">
+        <!-- <div class="carousel-container img_dashboard">
+          <div class="carousel ">
+            <img src="./public/assets/fondo.png" alt="Imagen 1" class="img_inicio">
+            <img src="./public/assets/home.jpg" alt="Imagen 2" class="img_inicio">
+          </div>
+        </div> -->
 
-    <div class="carousel-container img_dashboard">
-        <div class="carousel ">
-          <img src="./public/assets/fondo.png" alt="Imagen 1" class="img_inicio">
-          <img src="./public/assets/fondo.png" alt="Imagen 2" class="img_inicio">
+        <div class="sectionCard">
+          <div class="card grid_Card">
+            <img src="./public/assets/fondo.png" alt="Imagen de la tarjeta">
+            <h2>Asociaciones</h2>
+            <p class="cantidad_total">
+              <?php echo $cantidadAsociaciones; ?>
+            </p>
+            <!-- <a href="#">Leer más</a> -->
+          </div>
+
+          <div class="card grid_Card">
+            <!-- <img src="imagen.jpg" alt="Imagen de la tarjeta"> -->
+            <h2>Paraderos</h2>
+            <p class="cantidad_total">
+              <?php echo $cantidadParaderos; ?>
+            </p>
+            <!-- <a href="#">Leer más</a> -->
+          </div>
+
+          <div class="card grid_Card">
+            <!-- <img src="imagen.jpg" alt="Imagen de la tarjeta"> -->
+            <h2>Papeletas Sin Pagar</h2>
+            <p class="cantidad_total">
+              <?php echo $cantidadPapeletas; ?>
+            </p>
+            <!-- <a href="#">Leer más</a> -->
+          </div>
         </div>
+
+
       </div>
 
-      <div class="sectionCard">
-        <div class="card flex">
-          <!-- <img src="imagen.jpg" alt="Imagen de la tarjeta"> -->
-          <h2>Asociaciones</h2>
-          <p>Total Asociaciones:<br>
-            <?php echo $cantidadAsociaciones; ?>
-          </p>
-          <!-- <a href="#">Leer más</a> -->
-        </div>
-
-        <div class="card flex">
-          <!-- <img src="imagen.jpg" alt="Imagen de la tarjeta"> -->
-          <h2>Paraderos</h2>
-          <p>Total Paraderos:<br>
-            <?php echo $cantidadParaderos; ?>
-          </p>
-          <!-- <a href="#">Leer más</a> -->
-        </div>
-
-        <div class="card flex">
-          <!-- <img src="imagen.jpg" alt="Imagen de la tarjeta"> -->
-          <h2>Papeletas Sin Pagar</h2>
-          <!-- <p>Esta es una tarjeta simple con contenido. Puedes personalizar este texto según tus necesidades.</p> -->
-          <p>Total Papeletas sin Pago:<br>
-            <?php echo $cantidadPapeletas; ?>
-          </p>
-          <!-- <a href="#">Leer más</a> -->
-        </div>
-      </div>
-
-
-    </div>
+    </section>
 
   </div>
 

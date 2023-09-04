@@ -8,6 +8,7 @@
   <!-- Enlaces a las hojas de estilo -->
   <link rel="stylesheet" href="./public/styles/appMenu.css">
   <link rel="stylesheet" href="./public/styles/partials/body.css">
+  <link rel="stylesheet" href="./public/styles/partials/header.css">
   <link rel="stylesheet" href="./public/styles/paraderos.css">
 
   <!-- Importacion de iconos -->
@@ -21,21 +22,27 @@
 
     <!-- Incluir el encabezado desde un archivo externo -->
     <?php
-    include("app/Views/partials/header.php");
+    // include("app/Views/partials/header.php");
     ?>
-
-    <div class="paraderos_content">
-      <h3>Consulta de Paraderos Formales</h3>
-
-      <form action="#" method="GET" class="form ">
-        <div class="input flex">
-          <input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
-          <button type="submit">Buscar</button>
+    
+    <div class="topSection">
+      <div class="headerSection flex">
+        <div class="titulo">
+          <h2>Consulta de Paraderos Formales
+          </h2>
         </div>
-      </form>
+      </div>
 
+      <div class="paraderos_content">
+        <form action="#" method="GET" class="form ">
+          <div class="input flex">
+            <input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
+            <button type="submit" class='btn btn-form  flex'>Buscar</button>
+          </div>
+        </form>
+
+      </div>
     </div>
-  </div>
 </body>
 
 </html>
