@@ -39,7 +39,11 @@
 
       <div class="sectionCard">
         <div class="card grid_Card">
-          <img src="./public/assets/fondo.png" alt="Imagen de la tarjeta">
+
+          <div class="logoCard">
+            <!-- <img src="./public/assets/fondo.png" alt="Imagen de la tarjeta"> -->
+          </div>
+
           <h2>Asociaciones</h2>
           <p class="cantidad_total">
             <?php echo $cantidadAsociaciones; ?>
@@ -48,21 +52,27 @@
         </div>
 
         <div class="card grid_Card">
-          <!-- <img src="imagen.jpg" alt="Imagen de la tarjeta"> -->
-          <h2>Paraderos</h2>
+
+          <div class="logoCard">
+            <!-- <img src="./public/assets/fondo.png" alt="Imagen de la tarjeta"> -->
+          </div>
+
+          <h2>Unidades</h2>
           <p class="cantidad_total">
-            <?php echo $cantidadParaderos; ?>
+            <?php echo $cantidadUnidades; ?>
           </p>
-          <!-- <a href="#">Leer más</a> -->
         </div>
 
         <div class="card grid_Card">
-          <!-- <img src="imagen.jpg" alt="Imagen de la tarjeta"> -->
+
+          <div class="logoCard">
+            <!-- <img src="./public/assets/fondo.png" alt="Imagen de la tarjeta"> -->
+          </div>
+
           <h2>Papeletas Sin Pagar</h2>
           <p class="cantidad_total">
             <?php echo $cantidadPapeletas; ?>
           </p>
-          <!-- <a href="#">Leer más</a> -->
         </div>
       </div>
 

@@ -17,9 +17,9 @@ class ConsultaController
   private $papeletasModel;
 
   /**
-   * @var Paraderos Modelo de Paraderos
+   * @var Unidades Modelo de Unidades
    */
-  private $paraderosModel;
+  private $unidadesModel;
 
   /**
    * @var Asociaciones Modelo de Asociaciones
@@ -30,13 +30,13 @@ class ConsultaController
    * Constructor de la clase ConsultaController.
    *
    * @param Papeletas     $papeletasModel     Modelo de Papeletas
-   * @param Paraderos     $paraderosModel     Modelo de Paraderos
+   * @param Unidades     $unidadesModel     Modelo de Unidades
    * @param Asociaciones  $asociacionesModel  Modelo de Asociaciones
    */
-  public function __construct($papeletasModel, $paraderosModel, $asociacionesModel)
+  public function __construct($papeletasModel, $unidadesModel, $asociacionesModel)
   {
     $this->papeletasModel = $papeletasModel;
-    $this->paraderosModel = $paraderosModel;
+    $this->unidadesModel = $unidadesModel;
     $this->asociacionesModel = $asociacionesModel;
   }
 
@@ -50,7 +50,7 @@ class ConsultaController
   {
     try {
       $cantidadPapeletas = $this->papeletasModel->obtenerCantidadPapeletasSinPago();
-      $cantidadParaderos = $this->paraderosModel->obtenerCantidadParaderos();
+      $cantidadUnidades = $this->unidadesModel->obtenerCantidadUnidades();
       $cantidadAsociaciones = $this->asociacionesModel->obtenerCantidadAsociaciones();
 
       // Aquí puedes realizar cualquier otra lógica necesaria antes de devolver las cantidades
@@ -58,7 +58,7 @@ class ConsultaController
       // Retorna las cantidades en un arreglo asociativo
       return [
         'papeletas' => $cantidadPapeletas,
-        'paraderos' => $cantidadParaderos,
+        'unidades' => $cantidadUnidades,
         'asociaciones' => $cantidadAsociaciones,
         // Puedes agregar aquí otras cantidades si es necesario
       ];

@@ -18,14 +18,23 @@
 <body>
   <!-- Contenedor principal -->
   <div class="mainContent">
-
-    <!-- Incluir el encabezado desde un archivo externo -->
-    <?php
-    include("app/Views/partials/header.php");
-    ?>
+    <div class="topSection">
+      <div class="headerSection flex">
+        <div class="titulo">
+          <h2>
+            Consulta de Papeletas
+          </h2>
+        </div>
+      </div>
+    </div>
 
     <div class="papeletas_content">
-      <h3>Consulta de Papeletas No Pagadas</h3>
+      <form action="#" method="GET" class="form ">
+        <div class="input flex">
+          <input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
+          <button type="submit" class='btn btn-form  flex'>Buscar</button>
+        </div>
+      </form>
     </div>
   </div>
 </body>

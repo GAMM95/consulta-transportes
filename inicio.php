@@ -13,7 +13,7 @@ require_once 'config/conexion.php';
 
 // Cargar modelos y controladores
 require_once 'app/Models/Papeletas.php';
-require_once 'app/Models/Paraderos.php';
+require_once 'app/Models/Unidades.php';
 require_once 'app/Models/Asociaciones.php';
 require_once 'app/Controllers/ConsultaController.php';
 
@@ -23,18 +23,18 @@ $conector = $conexion->getConexion();
 
 // Crear instancias de los modelos
 $modelPapeletas = new Papeletas($conector);
-$modelParaderos = new Paraderos($conector);
+$modelUnidades = new Unidades($conector);
 $modelAsociaciones = new Asociaciones($conector);
 
 // Crear una instancia del controlador de consulta
-$controller = new ConsultaController($modelPapeletas, $modelParaderos, $modelAsociaciones);
+$controller = new ConsultaController($modelPapeletas, $modelUnidades, $modelAsociaciones);
 
 // Obtener las cantidades utilizando el controlador
 $cantidades = $controller->mostrarCantidades();
 
 // Cantidades individuales
 $cantidadPapeletas = $cantidades['papeletas'];
-$cantidadParaderos = $cantidades['paraderos'];
+$cantidadUnidades = $cantidades['unidades'];
 $cantidadAsociaciones = $cantidades['asociaciones'];
 ?>
 

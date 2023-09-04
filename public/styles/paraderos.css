@@ -1,12 +1,32 @@
+.headerSection {
+  justify-content: space-between;
+  /* width: 82%; */
+  height: 100%;
+  padding: 2rem;
+  overflow: auto;
+}
+
+h2 {
+  color: var(--blackColor);
+  font-weight: 700;
+}
+
+.topSection {
+  background: var(--hoverColor);
+  /* height: auto; */
+  width: 100%;
+}
+
 .paraderos_content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 82%;
+  /* width: 82%; */
   height: 100%;
   overflow: auto;
   padding: 2rem;
+  /* top: 0; */
 }
 
 .form {

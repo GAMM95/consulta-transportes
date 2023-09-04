@@ -3,7 +3,7 @@
 require_once 'config/conexion.php';
 
 // Clase Paraderos: representa un modelo para la gestión de paraderos
-class Paraderos
+class Unidades
 {
   private $conector; // Almacena la conexión a la base de datos
 
@@ -21,7 +21,7 @@ class Paraderos
    *
    * @return int Retorna la cantidad de paraderos como un entero. Si hay un error, retorna 0.
    */
-  public function obtenerCantidadParaderos()
+  public function obtenerCantidadUnidades()
   {
     // Consulta SQL para contar la cantidad de registros en la tabla 'UNIDAD'
     $query = "SELECT COUNT(*) AS total FROM UNIDAD";

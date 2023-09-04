@@ -8,7 +8,7 @@
   <!-- Enlaces a las hojas de estilo -->
   <link rel="stylesheet" href="./public/styles/appMenu.css">
   <link rel="stylesheet" href="./public/styles/partials/body.css">
-  <link rel="stylesheet" href="./public/styles/partials/header.css">
+  <!-- <link rel="stylesheet" href="./public/styles/partials/header.css"> -->
   <link rel="stylesheet" href="./public/styles/paraderos.css">
 
   <!-- Importacion de iconos -->
@@ -19,17 +19,14 @@
 <body>
   <!-- Contenedor principal -->
   <div class="mainContent">
-
-    <!-- Incluir el encabezado desde un archivo externo -->
-    <?php
-    // include("app/Views/partials/header.php");
-    ?>
-
-    <div class="topSection">
-      <div class="headerSection flex">
-        <div class="titulo">
-          <h2>Consulta de Paraderos Formales
-          </h2>
+    <!-- <section class="paraderos"> -->
+      <div class="topSection">
+        <div class="headerSection flex">
+          <div class="titulo">
+            <h2>
+              Consulta de Paraderos Formales
+            </h2>
+          </div>
         </div>
       </div>
 
@@ -42,7 +39,8 @@
         </form>
 
       </div>
-    </div>
+    <!-- </section> -->
+
   </div>
 </body>
 
