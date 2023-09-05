@@ -17,7 +17,16 @@
 </head>
 
 <body>
-<div class="mainContent">
+  <div class="mainContent">
+    <div class="topSection">
+      <div class="headerSection flex">
+        <div class="titulo">
+          <h2>
+            Consulta de Papeletas
+          </h2>
+        </div>
+      </div>
+    </div>
     <!-- ... Contenido principal de la página ... -->
     <div class="paraderos_content">
       <form action="/buscar-paraderos" method="POST" class="form">
@@ -28,23 +37,8 @@
       </form>
     </div>
     <div class="tabla">
-      <!-- Aquí mostrarás los resultados de la búsqueda si los tienes -->
       <?php
-      if (isset($resultados)) {
-        // Mostrar los resultados aquí
-        echo "<h2>Resultados</h2>";
-        echo "<table>";
-        echo "<tr><th>Conductor</th><th>Razón Social</th><th>Dirección</th><th>Colores</th></tr>";
-        foreach ($resultados as $paradero) {
-          echo "<tr>";
-          echo "<td>{$paradero['Conductor']}</td>";
-          echo "<td>{$paradero['ASO_razonsocial']}</td>";
-          echo "<td>{$paradero['ASO_direccion']}</td>";
-          echo "<td>{$paradero['ASO_colores']}</td>";
-          echo "</tr>";
-        }
-        echo "</table>";
-      }
+      // include 
       ?>
     </div>
   </div>
