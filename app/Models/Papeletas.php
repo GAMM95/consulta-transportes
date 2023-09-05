@@ -41,4 +41,20 @@ class Papeletas
     }
   }
 
+  public function obtenerPapeletasNoPagadasPorPlaca($uniPlaca) {
+      $query ="SELECT CONCAT(PER_nombre, ' ', PER_apellidos) AS Conductor, PAP_fechaemision, PAP_monto
+            FROM PAPELETA P
+            INNER JOIN UNIDAD U ON U.UNI_codigo = P.UNI_codigo
+            INNER JOIN PERSONA PER ON PER.PER_codigo = U.PRO_codigo
+            WHERE PAP_estado IN (24) AND UNI_placa = :s
+            ORDER BY PAP_fechaemision";
+
+      $stmt = $this->conector->prepare($query);
+      $stmt->bindParam("s", $uniPlaca);
+      $stmt->execute();
+
+      $papeletas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+      return $papeletas;
+  }
 }

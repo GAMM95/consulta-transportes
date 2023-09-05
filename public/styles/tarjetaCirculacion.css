@@ -29,6 +29,11 @@ h2 {
   gap: 1rem;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+}
+
 input {
   background: none;
   outline: none;
@@ -42,4 +47,20 @@ input {
   background: var(--inputColor);
   border-radius: 10px;
   width: 20rem;
+}
+
+
+.container {
+  position: relative;
+  width: 98vw;
+  height: 95vh;
+  /* width: auto;
+  height: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bgColor);
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 8px var(--greyText);
 }

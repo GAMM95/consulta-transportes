@@ -2,41 +2,123 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Enlaces a las hojas de estilo -->
-  <link rel="stylesheet" href="./public/styles/appMenu.css">
-  <link rel="stylesheet" href="./public/styles/partials/body.css">
-  <link rel="stylesheet" href="./public/styles/tarjetaCirculacion.css">
+    <!-- Enlaces a las hojas de estilo -->
+    <link rel="stylesheet" href="./public/styles/appMenu.css">
+    <link rel="stylesheet" href="./public/styles/partials/body.css">
+    <link rel="stylesheet" href="./public/styles/tarjetaCirculacion.css">
 
-  <!-- Importacion de iconos -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <title>Consulta Transportes</title>
+    <!-- Importacion de iconos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Consulta Transportes</title>
 </head>
 
 <body>
-  <!-- Contenedor principal -->
-  <div class="mainContent">
+<!-- Contenedor principal -->
+<div class="mainContent">
     <div class="topSection">
-      <div class="headerSection flex">
-        <div class="titulo">
-          <h2>
-            Consulta de Tarjetas de Circulación
-          </h2>
+        <div class="headerSection flex">
+            <div class="titulo">
+                <h2>
+                    Consulta de Tarjetas de Circulacion
+                </h2>
+            </div>
         </div>
-      </div>
     </div>
-    
+
     <div class="tarjetas_content">
-      <form action="#" method="GET" class="form ">
-        <div class="input flex">
-          <input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
-          <button type="submit" class='btn btn-form  flex'>Buscar</button>
-        </div>
-      </form>
+        <form action="tarjetas_de_circulacion.php" method="GET" class="form ">
+            <div class="input flex">
+                <input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
+                <button type="submit" class='btn btn-form  flex'>Buscar</button>
+            </div>
+        </form>
     </div>
-  </div>
+
+    <!-- TABLA DE RESULTADOS -->
+    <?php if (!empty($busqueda)) : ?>
+
+        <div class="w-full p-4 relative overflow-x-auto">
+            <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <?php if (empty($resultadoBusqueda)) : ?>
+                    <p class="mb-2 text-2xl  tracking-tight text-gray-900 dark:text-white">
+                        No se hallaron resultados para la placa <span
+                                class="font-semibold"><?php echo $busqueda; ?></span>.
+                    </p>
+                <?php else : ?>
+                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Resultados</h5>
+
+                    <div style="gap: 0;" class="mt-4 grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 xl:grid-cols-3 md:grid-cols-2">
+                        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
+                            <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">RAZON SOCIAL</h3>
+                                <p class="my-4"><?php echo $resultadoBusqueda[0]['ASO_razonsocial']; ?></p>
+                            </blockquote>
+                        </figure>
+                        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
+                            <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">RUC</h3>
+                                <p class="my-4"><?php echo $resultadoBusqueda[0]['ASO_ruc']; ?></p>
+                            </blockquote>
+                        </figure>
+                        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-bl-lg dark:bg-gray-800 dark:border-gray-700">
+                            <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">CODIGO</h3>
+                                <p class="my-4"><?php echo $resultadoBusqueda[0]['TAR_codigo']; ?></p>
+                            </blockquote>
+                        </figure>
+                        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+                            <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">FECHA DE EMISION</h3>
+                                <p class="my-4"><?php echo $resultadoBusqueda[0]['TAR_fechaemision']; ?></p>
+                            </blockquote>
+                        </figure>
+                        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+                            <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">FECHA DE VENCIMIENTO</h3>
+                                <p class="my-4"><?php echo $resultadoBusqueda[0]['TAR_fechavencimiento']; ?></p>
+                            </blockquote>
+                        </figure>
+                        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-t border-l border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+                            <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">MOTOR</h3>
+                                <p class="my-4"><?php echo $resultadoBusqueda[0]['UNI_motor']; ?></p>
+                            </blockquote>
+                        </figure>
+                        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 border rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+                            <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">N° UNIDAD</h3>
+                                <p class="my-4"><?php echo $resultadoBusqueda[0]['UNI_numerounidad']; ?></p>
+                            </blockquote>
+                        </figure>
+                        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+                            <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">MODELO</h3>
+                                <p class="my-4"><?php echo $resultadoBusqueda[0]['MOD_descripcion']; ?></p>
+                            </blockquote>
+                        </figure>
+                        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+                            <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">MARCA</h3>
+                                <p class="my-4"><?php echo $resultadoBusqueda[0]['MAR_descripcion']; ?></p>
+                            </blockquote>
+                        </figure>
+                    </div>
+
+
+
+
+                <?php endif; ?>
+
+            </div>
+
+        </div>
+    <?php else : ?>
+    <?php endif; ?>
+
+</div>
 </body>
 
 </html>

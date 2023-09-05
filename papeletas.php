@@ -6,8 +6,27 @@ if (!isset($_SESSION['username'])) {
   exit();
 }
 
+$busqueda = $_GET['busqueda'] ?? '';
+
 // Importar el controlador necesario
 require_once 'app/Controllers/PapeletaController.php';
+
+// Crear una instancia de la conexión a la base de datos
+$conexion = new Conexion();
+$conector = $conexion->getConexion();
+
+// Crear instancias de los modelos
+$modelPapeletas = new Papeletas($conector);
+
+$controller = new PapeletaController($modelPapeletas);
+
+$resultadoBusqueda = NULL;
+
+if (!empty($busqueda)) {
+    $resultadoBusqueda = $controller->consultarPapeletas();
+} else {
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +37,7 @@ require_once 'app/Controllers/PapeletaController.php';
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="public/assets/logo.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Importación de estilos -->
   <link rel="stylesheet" href="./public/styles/appMenu.css">
@@ -30,6 +50,7 @@ require_once 'app/Controllers/PapeletaController.php';
     // Incluir la barra lateral desde un archivo externo
     include("app/Views/partials/sideBar.php");
     ?>
+
     <?php
     // Incluir el cuerpo de la página desde un archivo externo
     include("./app/Views/PnlPapeletas.php");

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   width: 82%;
   height: 100%;
   overflow: hidden;
