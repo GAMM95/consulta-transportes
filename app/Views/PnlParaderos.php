@@ -17,34 +17,36 @@
 </head>
 
 <body>
-  <!-- Contenedor principal -->
-  <div class="mainContent">
-    <div class="topSection">
-      <div class="headerSection flex">
-        <div class="titulo">
-          <h2>
-            Consulta de Paraderos Formales
-          </h2>
-        </div>
-      </div>
-    </div>
-
+<div class="mainContent">
+    <!-- ... Contenido principal de la página ... -->
     <div class="paraderos_content">
-      <form action="#" method="GET" class="form ">
+      <form action="/buscar-paraderos" method="POST" class="form">
         <div class="input flex">
-          <input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
-          <button type="submit" class='btn btn-form  flex'>Buscar</button>
+          <input type="text" id="placa" name="placa" placeholder="Placa del vehículo" required>
+          <button type="submit" class="btn btn-form flex">Buscar</button>
         </div>
       </form>
-
-
     </div>
-
     <div class="tabla">
-        <?php
-        include("app/Views/partials/tablaConsultarParaderos.php");
-        ?>
-      </div>
+      <!-- Aquí mostrarás los resultados de la búsqueda si los tienes -->
+      <?php
+      if (isset($resultados)) {
+        // Mostrar los resultados aquí
+        echo "<h2>Resultados</h2>";
+        echo "<table>";
+        echo "<tr><th>Conductor</th><th>Razón Social</th><th>Dirección</th><th>Colores</th></tr>";
+        foreach ($resultados as $paradero) {
+          echo "<tr>";
+          echo "<td>{$paradero['Conductor']}</td>";
+          echo "<td>{$paradero['ASO_razonsocial']}</td>";
+          echo "<td>{$paradero['ASO_direccion']}</td>";
+          echo "<td>{$paradero['ASO_colores']}</td>";
+          echo "</tr>";
+        }
+        echo "</table>";
+      }
+      ?>
+    </div>
   </div>
 </body>
 

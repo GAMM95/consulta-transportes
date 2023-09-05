@@ -157,6 +157,7 @@ h3 {
 /* Estilos para el formulario */
 .form {
   gap: 1rem;
+  margin: 0 2rem;
 }
 
 /* Estilos para el icono en los campos de entrada */
