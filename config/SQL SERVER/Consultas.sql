@@ -13,6 +13,7 @@ Script         :  Consultas
 /* Cantidad total de unidades*/
 SELECT count(*) FROM UNIDAD;
 
+
 /* Cantidad total de asociacione */
 SELECT count(*) FROM ASOCIACION;
 
