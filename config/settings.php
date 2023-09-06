@@ -13,5 +13,5 @@ define("DATABASE", "TRANSPORTE");
 
 // Dirección del servidor de la base de datos
 // define("SERVIDOR", "JHONATANMM");
-// define("SERVIDOR", "INF05");
-define("SERVIDOR","SERVER-301193");
+define("SERVIDOR", "SGIS05");
+// define("SERVIDOR","SERVER-301193");
