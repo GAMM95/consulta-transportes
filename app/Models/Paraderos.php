@@ -1,38 +1,29 @@
 <?php
 require_once 'config/conexion.php';
 
-class Paradero
+class Paraderos
 {
     private $conector;
 
-    public function __construct()
+    public function __construct($conector)
     {
-        $this->conector = (new Conexion())->getConexion();
+        $this->conector = $conector;
     }
 
-    public function consultarParaderoPorPlaca($placa)
+    public function obtenerParaderosporplaca($uniPlaca)
     {
-        $sql = "SELECT DISTINCT CONCAT(P.PER_apellidos, ', ', P.PER_nombre) AS Conductor, A.ASO_razonsocial, A.ASO_direccion, A.ASO_colores 
+        $query = "SELECT DISTINCT CONCAT(P.PER_apellidos, ', ', P.PER_nombre) AS Conductor, A.ASO_direccion, A.ASO_colores as colores
                 FROM UNIDAD U
                 LEFT JOIN ASOCIACION A ON U.UNI_codigo = A.ASO_codigo
                 INNER JOIN PERSONA P ON P.PER_codigo = U.PRO_codigo
                 WHERE U.UNI_placa = :placa";
 
-        try {
-            $stmt = $this->conector->prepare($sql);
-            $stmt->bindParam(":placa", $placa, PDO::PARAM_STR);
-            $stmt->execute();
+        $stmt = $this->conector->prepare($query);
+        $stmt->bindParam("placa", $uniPlaca);
+        $stmt->execute();
 
-            // Utiliza fetchAll para obtener todos los resultados de una vez
-            $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $paraderos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            // Cierra la conexión para liberar recursos
-            $stmt->closeCursor();
-
-            return $resultados;
-        } catch (PDOException $e) {
-            // Puedes manejar el error aquí (por ejemplo, log de errores)
-            return false;
-        }
+        return $paraderos;
     }
 }

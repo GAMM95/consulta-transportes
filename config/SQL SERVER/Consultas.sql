@@ -58,5 +58,5 @@ SELECT DISTINCT CONCAT(PER_apellidos,', ',PER_nombre) AS Conductor, ASO_razonsoc
 FROM UNIDAD U
 LEFT JOIN ASOCIACION A ON U.UNI_codigo=A.ASO_codigo
 INNER JOIN PERSONA P ON P.PER_codigo=U.PRO_codigo
-WHERE UNI_placa IN ('6195-2T')
+WHERE UNI_placa IN ('M4-6753')
 GO
