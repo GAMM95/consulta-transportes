@@ -30,20 +30,14 @@
     <!-- <section class="inicio"> -->
     <div class="inicio_content">
 
-      <!-- <div class="carousel-container img_dashboard">
-          <div class="carousel ">
-            <img src="./public/assets/fondo.png" alt="Imagen 1" class="img_inicio">
-            <img src="./public/assets/home.jpg" alt="Imagen 2" class="img_inicio">
-          </div>
-        </div> -->
-
       <div class="sectionCard">
+
+        <!-- Card de Asociaciones -->
         <div class="card grid_Card">
-
           <div class="logoCard">
-            <!-- <img src="./public/assets/fondo.png" alt="Imagen de la tarjeta"> -->
+            <img src="./public/assets/asociaciones.png" class="imgCardLogo" alt="Imagen de la tarjeta">
           </div>
-
+          <!-- Cantidad Asociaciones -->
           <h2>Asociaciones</h2>
           <p class="cantidad_total">
             <?php echo $cantidadAsociaciones; ?>
@@ -51,24 +45,24 @@
           <!-- <a href="#">Leer más</a> -->
         </div>
 
+        <!-- Card de Mototaxis -->
         <div class="card grid_Card">
-
           <div class="logoCard">
-            <!-- <img src="./public/assets/fondo.png" alt="Imagen de la tarjeta"> -->
+            <img src="./public/assets/mototaxi.png" class="imgCardLogo" alt="Imagen de la tarjeta">
           </div>
-
+          <!-- Cantidad Unidades -->
           <h2>Unidades</h2>
           <p class="cantidad_total">
             <?php echo $cantidadUnidades; ?>
           </p>
         </div>
 
+        <!-- Card de Papeletas Sin Pagar -->
         <div class="card grid_Card">
-
           <div class="logoCard">
-            <!-- <img src="./public/assets/fondo.png" alt="Imagen de la tarjeta"> -->
+            <img src="./public/assets/papeleta.png" class="imgCardLogo" alt="Imagen de la tarjeta">
           </div>
-
+          <!-- Cantidad Papeletas Sin Pagar -->
           <h2>Papeletas Sin Pagar</h2>
           <p class="cantidad_total">
             <?php echo $cantidadPapeletas; ?>

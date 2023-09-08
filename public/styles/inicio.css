@@ -33,6 +33,9 @@
   /* padding:0 2rem 0 2rem ;*/
 }
 
+.imgCardLogo{
+  width: 80%;
+}
 /* .img_dashboard {
   width: 80%;
   justify-content: center;
@@ -98,9 +101,8 @@
 }
 
 .card img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
-  border-radius: 4px;
 }
 
 .logoCard {
