@@ -1,5 +1,5 @@
 .inicio_content {
-  background: center / cover url("../assets/fondo.png");
+  background: center / cover url("../assets/fondo5.jpg");
   background-color: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75));
   min-height: calc(100vh + var(--header-height));
   display: flex;
