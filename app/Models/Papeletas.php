@@ -42,7 +42,7 @@ class Papeletas
   }
 
   public function obtenerPapeletasNoPagadasPorPlaca($uniPlaca) {
-      $query ="SELECT CONCAT(PER_nombre, ' ', PER_apellidos) AS Conductor, PAP_fechaemision, PAP_monto
+      $query ="SELECT CONCAT(PER_nombre, ' ', PER_apellidos) AS Conductor, FORMAT(PAP_fechaemision, 'dd/MM/yyyy HH:mm') AS FechaEmisionFormateada, PAP_monto
             FROM PAPELETA P
             INNER JOIN UNIDAD U ON U.UNI_codigo = P.UNI_codigo
             INNER JOIN PERSONA PER ON PER.PER_codigo = U.PRO_codigo

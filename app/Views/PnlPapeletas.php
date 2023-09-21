@@ -72,7 +72,7 @@
                                     <?php echo $papeleta['Conductor']; ?>
                                 </th>
                                 <td class="px-6 py-4 dark:text-white">
-                                    <?php echo $papeleta['PAP_fechaemision']; ?>
+                                    <?php echo $papeleta['FechaEmisionFormateada']; ?>
                                 </td>
                                 <td class="px-6 py-4 dark:text-white">
                                     <?php echo $papeleta['PAP_monto']; ?>
