@@ -12,21 +12,16 @@
 
     <!-- Importacion de iconos -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Consulta Transportes</title>
 </head>
 
 <body>
 <!-- Contenedor principal -->
-<div class="mainContent">
-    <div class="topSection">
-        <div class="headerSection flex">
-            <div class="titulo">
-                <h2>
-                    Consulta de Papeletas
-                </h2>
-            </div>
-        </div>
-    </div>
+<div class="mainContent !w-full">
+    <?php
+    include ("app/Views/partials/header.php")
+    ?>
 
     <div class="papeletas_content">
         <form action="papeletas.php" method="GET" class="form ">

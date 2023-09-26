@@ -6,12 +6,12 @@ define("USUARIO", "sa");
 
 // Contraseña para la conexión a la base de datos
 // define("PASSWORD", "S0p0rt3");
-define("PASSWORD", "sql");
+define("PASSWORD", "S0p0rt3");
 
 // Nombre de la base de datos
 define("DATABASE", "TRANSPORTE");
 
 // Dirección del servidor de la base de datos
-define("SERVIDOR", "JHONATANMM");
+// define("SERVIDOR", "JHONATANMM");
 // define("SERVIDOR", "SGIS05");
-// define("SERVIDOR","SERVER-301193");
+define("SERVIDOR","SERVER-301193");
