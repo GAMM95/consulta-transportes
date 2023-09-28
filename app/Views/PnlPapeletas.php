@@ -23,8 +23,8 @@
     include ("app/Views/partials/header.php")
     ?>
 
-    <div class="papeletas_content">
-        <form action="papeletas.php" method="GET" class="form ">
+    <div class="papeletas_content mb-3">
+        <form action="papeletas.php" method="GET" class="form mb-10">
             <div class="input flex">
                 <input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
                 <button type="submit" class='btn btn-form  flex'>Buscar</button>
@@ -44,7 +44,7 @@
                     </p>
                 <?php else : ?>
                     <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Resultados</h5>
-
+                    <div class="overflow-x-auto">
                     <table class="w-full mt-8 rounded text-sm text-left text-gray-500">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
@@ -61,7 +61,7 @@
                         </thead>
                         <tbody>
                         <?php foreach ($resultadoBusqueda as $papeleta) : ?>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <tr class=" bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <th scope="row"
                                     class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     <?php echo $papeleta['Conductor']; ?>
@@ -76,6 +76,7 @@
                         <?php endforeach; ?>
                         </tbody>
                     </table>
+                    </div>
                 <?php endif; ?>
 
             </div>

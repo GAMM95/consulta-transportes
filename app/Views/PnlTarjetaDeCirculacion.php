@@ -17,8 +17,8 @@
 
 <body>
     <!-- Contenedor principal -->
-    <div class="mainContent">
-        <div class="topSection">
+    <div class="mainContent !w-full">
+        <!-- <div class="topSection">
             <div class="headerSection flex">
                 <div class="titulo">
                     <h2>
@@ -26,11 +26,14 @@
                     </h2>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <?php
+        include("app/Views/partials/header.php")
+        ?>
 
-        <div class="tarjetas_content">
-            <form action="tarjetas_de_circulacion.php" method="GET" class="form ">
-                <div class="input flex">
+        <div class="tarjetas_content mb-3">
+            <form action="tarjetas_de_circulacion.php" method="GET" class="form mb-10 ">
+                <div class="input flex p-4">
                     <input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
                     <button type="submit" class='btn btn-form  flex'>Buscar</button>
                 </div>
@@ -40,8 +43,8 @@
         <!-- TABLA DE RESULTADOS -->
         <?php if (!empty($busqueda)) : ?>
 
-            <div class="w-full p-4 relative overflow-x-auto">
-                <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="m-2 relative overflow-x-auto">
+                <div class="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <?php if (empty($resultadoBusqueda)) : ?>
                         <p class="mb-2 text-2xl  tracking-tight text-gray-900 dark:text-white">
                             No se hallaron resultados para la placa <span class="font-semibold"><?php echo $busqueda; ?></span>.
@@ -52,21 +55,21 @@
                         <div style="gap: 0;" class="mt-4 grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 xl:grid-cols-3 md:grid-cols-2">
 
                             <!-- PRIMERA FILA -->
-                            <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
+                            <figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
                                 <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
                                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">ESTADO</h3>
                                     <p class="my-4"><?php echo $resultadoBusqueda[0]['EST_descripcion']; ?></p>
                                 </blockquote>
                             </figure>
 
-                            <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
+                            <figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
                                 <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
                                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">ASOCIACION</h3>
                                     <p class="my-4"><?php echo $resultadoBusqueda[0]['ASO_razonsocial']; ?></p>
                                 </blockquote>
                             </figure>
 
-                            <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-bl-lg dark:bg-gray-800 dark:border-gray-700">
+                            <figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-bl-lg dark:bg-gray-800 dark:border-gray-700">
                                 <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
                                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">RUC</h3>
                                     <p class="my-4"><?php echo $resultadoBusqueda[0]['ASO_ruc']; ?></p>
@@ -74,21 +77,21 @@
                             </figure>
 
                             <!-- SEGUNDA FILA -->
-                            <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+                            <figure class="flex flex-col items-center justify-center p-2 text-center bg-white border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
                                 <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
                                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">CÓDIGO</h3>
                                     <p class="my-4"><?php echo $resultadoBusqueda[0]['TAR_codigo']; ?></p>
                                 </blockquote>
                             </figure>
 
-                            <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+                            <figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
                                 <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
-                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">FECHA DE EMISIÓN</h3>
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">FECHA DE EMISIÓN</h3>
                                     <p class="my-4"><?php echo $resultadoBusqueda[0]['FechaEmisionFormateada']; ?>
                                 </blockquote>
                             </figure>
 
-                            <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-t border-l border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+                            <figure class="flex flex-col items-center justify-center p-2 text-center bg-white border-b border-t border-l border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
                                 <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
                                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">FECHA DE VENCIMIENTO</h3>
                                     <p class="my-4"><?php echo $resultadoBusqueda[0]['FechaVencimientoFormateada']; ?></p>
@@ -96,21 +99,21 @@
                             </figure>
 
                             <!-- TERCERA FILA -->
-                            <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 border rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+                            <figure class="flex flex-col items-center justify-center p-2 text-center bg-white border-gray-200 border rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
                                 <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
                                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">MOTOR</h3>
                                     <p class="my-4"><?php echo $resultadoBusqueda[0]['UNI_motor']; ?></p>
                                 </blockquote>
                             </figure>
 
-                            <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+                            <figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
                                 <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
                                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">MODELO</h3>
                                     <p class="my-4"><?php echo $resultadoBusqueda[0]['MOD_descripcion']; ?></p>
                                 </blockquote>
                             </figure>
 
-                            <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+                            <figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
                                 <blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
                                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">MARCA</h3>
                                     <p class="my-4"><?php echo $resultadoBusqueda[0]['MAR_descripcion']; ?></p>

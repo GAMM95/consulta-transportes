@@ -21,7 +21,7 @@
 <body>
 
   <!-- Contenedor principal -->
-  <div class="mainContent ">
+  <div class="mainContent !w-full">
     <!-- Incluir el encabezado desde un archivo externo -->
     <?php
     include("app/Views/partials/header.php");

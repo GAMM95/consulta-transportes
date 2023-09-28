@@ -17,9 +17,11 @@
 </head>
 
 <body>
+
   <!-- Contenedor principal -->
-  <div class="mainContent">
-    <div class="topSection">
+  <div class="mainContent !w-full">
+
+    <!-- <div class="topSection">
       <div class="headerSection flex">
         <div class="titulo">
           <h2>
@@ -27,10 +29,13 @@
           </h2>
         </div>
       </div>
-    </div>
+    </div> -->
+    <?php
+    include ("app/Views/partials/header.php")
+    ?>
 
     <!-- ... Contenido principal de la página ... -->
-    <div class="paraderos_content">
+    <div class="paraderos_content mb-3">
       <form action="paraderos.php" method="GET" class="form">
         <div class="input flex">
           <input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>

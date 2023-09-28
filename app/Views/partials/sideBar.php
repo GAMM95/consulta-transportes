@@ -19,7 +19,7 @@
 
 <body>
 <!-- Contenedor de la barra lateral -->
-<div class="sideBar grid collapse lg:visible">
+<div class="sideBar hidden lg:block">
 
     <!-- División para el logo -->
     <div class="logoDiv flex ">
