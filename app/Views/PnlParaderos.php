@@ -54,7 +54,7 @@
                       Conductor
                     </th>
                     <th scope="col" class="px-6 py-3">
-                      Razon Social
+                      Asociación
                     </th>
                     <th scope="col" class="px-6 py-3">
                       Dirección
@@ -71,7 +71,7 @@
                         <?php echo $paraderos['Conductor']; ?>
                       </th>
                       <td class="px-6 py-4 dark:text-white">
-                        <?php echo $paraderos['ASO_razonsocial']; ?>
+                        <?php echo $paraderos['asociacion']; ?>
                       </td>
                       <td class="px-6 py-4 dark:text-white">
                         <?php echo $paraderos['ASO_direccion']; ?>

@@ -29,7 +29,7 @@
     <!-- División del menú -->
     <div class="menuDiv">
         <h3 class="divTitulo">
-            Consultas
+            
         </h3>
         <ul class="menuList grid">
 

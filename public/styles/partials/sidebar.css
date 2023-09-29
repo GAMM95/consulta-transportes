@@ -42,11 +42,12 @@
 
 .logoDiv {
   padding: 1.5rem 1.5rem 0;
+
   /* cursor: pointer; */
   align-content: center;
 }
 
-.img_logo {
+.img_logo  {
   max-width: 8rem;
   margin-right: 0.5rem;
   border-radius: 2px;
@@ -61,6 +62,8 @@
   font-size: var(--h3FontSize);
   color: var(--blackColor);
   padding: 0 1.5rem 1.5rem;
+  
+  padding-bottom: 4rem;
 }
 
 .listItem {
@@ -121,7 +124,7 @@ h3 {
   padding: .8rem 1rem;
   color: var(--textColor);
   justify-content: center;
-  margin: 0 2rem 0 2rem;
+  margin: 5rem 2rem 0 2rem;
 }
 
 .btn .icon {
