@@ -21,17 +21,8 @@
   <!-- Contenedor principal -->
   <div class="mainContent !w-full">
 
-    <!-- <div class="topSection">
-      <div class="headerSection flex">
-        <div class="titulo">
-          <h2>
-            Consulta de Paraderos
-          </h2>
-        </div>
-      </div>
-    </div> -->
     <?php
-    include ("app/Views/partials/header.php")
+    include("app/Views/partials/header.php")
     ?>
 
     <!-- ... Contenido principal de la página ... -->
@@ -55,36 +46,44 @@
           <?php else : ?>
             <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Resultados</h5>
 
-            <table class="w-full mt-8 rounded text-sm text-left text-gray-500">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" class="px-6 py-3">
-                    Conductor
-                  </th>
-                  <th scope="col" class="px-6 py-3">
-                    Dirección
-                  </th>
-                  <th scope="col" class="px-6 py-3">
-                    Colores
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php foreach ($resultadoBusqueda as $paraderos) : ?>
-                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <?php echo $paraderos['Conductor']; ?>
+            <div class="overflow-x-auto">
+              <table class="w-full mt-8 rounded text-sm text-left text-gray-500">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                  <tr>
+                    <th scope="col" class="px-6 py-3">
+                      Conductor
                     </th>
-                    <td class="px-6 py-4 dark:text-white">
-                      <?php echo $paraderos['ASO_direccion']; ?>
-                    </td>
-                    <td class="px-6 py-4 dark:text-white">
-                      <?php echo $paraderos['colores']; ?>
-                    </td>
+                    <th scope="col" class="px-6 py-3">
+                      Razon Social
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                      Dirección
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                      Colores
+                    </th>
                   </tr>
-                <?php endforeach; ?>
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  <?php foreach ($resultadoBusqueda as $paraderos) : ?>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <?php echo $paraderos['Conductor']; ?>
+                      </th>
+                      <td class="px-6 py-4 dark:text-white">
+                        <?php echo $paraderos['ASO_razonsocial']; ?>
+                      </td>
+                      <td class="px-6 py-4 dark:text-white">
+                        <?php echo $paraderos['ASO_direccion']; ?>
+                      </td>
+                      <td class="px-6 py-4 dark:text-white">
+                        <?php echo $paraderos['colores']; ?>
+                      </td>
+                    </tr>
+                  <?php endforeach; ?>
+                </tbody>
+              </table>
+            </div>
           <?php endif; ?>
 
         </div>

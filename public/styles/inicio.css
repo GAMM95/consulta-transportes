@@ -29,7 +29,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  overflow: overlay;
+  overflow: overlay; 
 }
 
 .imgCardLogo{
@@ -40,7 +40,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  padding-top: 20px;
+  /* padding-top: 20px; */
 }
 
 .grid_Card {
@@ -99,4 +99,27 @@
   height: 82%;
   /* Ajusta la altura deseada para el panel */
   /* Otras propiedades de estilo para el panel si es necesario */
+}
+
+@media screen and (max-width: 535px) {
+  .inicio_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: overlay; 
+  }
+  .card {
+    flex: 1;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 300px;
+    max-height: auto;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0;
+    justify-content: center;
+  }
 }

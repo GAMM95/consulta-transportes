@@ -121,10 +121,6 @@
                             </figure>
 
                         </div>
-
-
-
-
                     <?php endif; ?>
 
                 </div>
