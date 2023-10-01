@@ -41,20 +41,23 @@ class Papeletas
     }
   }
 
-  public function obtenerPapeletasNoPagadasPorPlaca($uniPlaca) {
-      $query ="SELECT CONCAT(PER_nombre, ' ', PER_apellidos) AS Propietario, FORMAT(PAP_fechaemision, 'dd/MM/yyyy HH:mm') AS FechaEmisionFormateada, PAP_monto
-            FROM PAPELETA P
-            INNER JOIN UNIDAD U ON U.UNI_codigo = P.UNI_codigo
-            INNER JOIN PERSONA PER ON PER.PER_codigo = U.PRO_codigo
-            WHERE PAP_estado IN (24) AND UNI_placa = :s
-            ORDER BY PAP_fechaemision";
+  public function obtenerPapeletasNoPagadasPorPlaca($uniPlaca)
+  {
+    $query = "SELECT CONCAT(PER_nombre, ' ', PER_apellidos) AS propietario,  CONCAT(FORMAT(PAP_fechaemision, 'dd/MM/yyyy'),' ',PAP_hora) AS fechaEmisionFormateada, UNI_tarjetapropiedad as tarjetaPropiedad, I.INF_descripcion AS infraccion, PAP_monto AS monto, EST_descripcion AS estado
+    FROM PAPELETA P
+    INNER JOIN UNIDAD U ON U.UNI_codigo = P.UNI_codigo
+    INNER JOIN PERSONA PER ON PER.PER_codigo = U.PRO_codigo
+    INNER JOIN INFRACCION I ON I.INF_codigo = P.INF_codigo
+		INNER JOIN ESTADO E ON E.EST_codigo = P.PAP_estado
+    WHERE UNI_placa = :s
+    ORDER BY PAP_fechaemision";
 
-      $stmt = $this->conector->prepare($query);
-      $stmt->bindParam("s", $uniPlaca);
-      $stmt->execute();
+    $stmt = $this->conector->prepare($query);
+    $stmt->bindParam("s", $uniPlaca);
+    $stmt->execute();
 
-      $papeletas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $papeletas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-      return $papeletas;
+    return $papeletas;
   }
 }

@@ -23,7 +23,7 @@ $conector = $conexion->getConexion();
 
 // Crear instancias de los modelos
 $modelPapeletas = new Papeletas($conector);
-$modelUnidades = new Unidades($conector);
+$modelUnidades = new Unidades($conector); 
 $modelAsociaciones = new Asociaciones($conector);
 
 // Crear una instancia del controlador de consulta

@@ -20,11 +20,13 @@ class Tarjeta
 
     public function obtenerTarjetaPorPlaca($uniPlaca)
     {
-        $query = "SELECT ASO_razonsocial, ASO_ruc, 
-                    TAR_codigo, TAR_serie, FORMAT(TAR_fechaemision, 'dd/MM/yyyy') AS FechaEmisionFormateada,FORMAT(TAR_fechavencimiento, 'dd/MM/yyyy') AS FechaVencimientoFormateada,
-                    RES_numero,
-                    UNI_aniofabrica,UNI_motor, MOD_descripcion, MAR_descripcion
-                     ,EST_descripcion
+        $query = "SELECT ASO_razonsocial AS asociacion, ASO_ruc AS ruc, 
+        TAR_serie AS serie, 
+        FORMAT(TAR_fechaemision, 'dd/MM/yyyy') AS fechaEmisionFormateada,FORMAT(TAR_fechavencimiento, 'dd/MM/yyyy') AS fechaVencimientoFormateada,
+        RES_numero AS numero,
+        UNI_aniofabrica AS anioFabricacion,
+        UNI_motor AS motor, MOD_descripcion AS modelo, 
+        MAR_descripcion AS marca,EST_descripcion AS estado
                     FROM TARJETA_CIRCULACION  TJ
                     INNER JOIN UNIDAD U ON U.UNI_codigo=TJ.UNI_codigo
                     INNER JOIN ASOCIACION A ON A.ASO_codigo=U.ASO_codigo

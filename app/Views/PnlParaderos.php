@@ -60,7 +60,7 @@
                       Dirección
                     </th>
                     <th scope="col" class="px-6 py-3">
-                      Colores
+                      Referencia
                     </th>
                   </tr>
                 </thead>
@@ -68,16 +68,16 @@
                   <?php foreach ($resultadoBusqueda as $paraderos) : ?>
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                       <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <?php echo $paraderos['Conductor']; ?>
+                        <?php echo $paraderos['conductor']; ?>
                       </th>
                       <td class="px-6 py-4 dark:text-white">
                         <?php echo $paraderos['asociacion']; ?>
                       </td>
                       <td class="px-6 py-4 dark:text-white">
-                        <?php echo $paraderos['ASO_direccion']; ?>
+                        <?php echo $paraderos['direccion']; ?>
                       </td>
                       <td class="px-6 py-4 dark:text-white">
-                        <?php echo $paraderos['colores']; ?>
+                        <?php echo $paraderos['referencia']; ?>
                       </td>
                     </tr>
                   <?php endforeach; ?>

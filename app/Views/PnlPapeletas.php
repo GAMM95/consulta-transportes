@@ -49,13 +49,22 @@
                                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
                                         <th scope="col" class="px-6 py-3">
-                                            Conductor
+                                            Propietario
                                         </th>
                                         <th scope="col" class="px-6 py-3">
                                             Fecha de Emisión
                                         </th>
                                         <th scope="col" class="px-6 py-3">
+                                            Tarjeta de Propiedad
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Infracción
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
                                             Monto
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Estado
                                         </th>
                                     </tr>
                                 </thead>
@@ -63,13 +72,22 @@
                                     <?php foreach ($resultadoBusqueda as $papeleta) : ?>
                                         <tr class=" bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                <?php echo $papeleta['Conductor']; ?>
+                                                <?php echo $papeleta['propietario']; ?>
                                             </th>
                                             <td class="px-6 py-4 dark:text-white">
-                                                <?php echo $papeleta['FechaEmisionFormateada']; ?>
+                                                <?php echo $papeleta['fechaEmisionFormateada']; ?>
                                             </td>
                                             <td class="px-6 py-4 dark:text-white">
-                                                <?php echo $papeleta['PAP_monto']; ?>
+                                                <?php echo $papeleta['tarjetaPropiedad']; ?>
+                                            </td>
+                                            <td class="px-6 py-4 dark:text-white">
+                                                <?php echo $papeleta['infraccion']; ?>
+                                            </td>
+                                            <td class="px-6 py-4 dark:text-white">
+                                                <?php echo $papeleta['monto']; ?>
+                                            </td>
+                                            <td class="px-6 py-4 dark:text-white">
+                                                <?php echo $papeleta['estado']; ?>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

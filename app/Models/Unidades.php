@@ -7,15 +7,16 @@ class Unidades
 {
   private $conector; // Almacena la conexión a la base de datos
 
-  // Constructor de la clase Unidades
-  public function __construct()
+  /**
+   * Constructor de la clase Unidades.
+   *
+   * @param PDO $conector La instancia de conexión a la base de datos.
+   */
+  public function __construct($conector)
   {
-    // Crea una nueva instancia de la clase de conexión
-    $conexion = new Conexion();
-    // Obtiene la conexión a la base de datos
-    $this->conector = $conexion->getConexion();
+    $this->conector = $conector;
   }
-
+  
   /**
    * Obtiene la cantidad de unidades desde la base de datos.
    *

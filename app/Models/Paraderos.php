@@ -12,11 +12,12 @@ class Paraderos
 
     public function obtenerParaderosporplaca($uniPlaca)
     {
-        $query = "SELECT DISTINCT CONCAT(P.PER_apellidos, ', ', P.PER_nombre) AS Conductor, A.ASO_razonsocial as asociacion, A.ASO_direccion, A.ASO_colores as colores
+        $query = "SELECT DISTINCT CONCAT(P.PER_apellidos, ', ', P.PER_nombre) AS conductor, A.ASO_razonsocial as asociacion, rp.PAR_descripcion as direccion, rp.PAR_referencia as referencia
                 FROM UNIDAD U
                 LEFT JOIN ASOCIACION A ON U.UNI_codigo = A.ASO_codigo
                 INNER JOIN PERSONA P ON P.PER_codigo = U.PRO_codigo
-                
+                INNER JOIN RESOLUCION R ON r.ASO_codigo = a.ASO_codigo
+                INNER JOIN RESOLUCION_PARADERO rp on rp.RES_codigo = r.RES_codigo
                 WHERE U.UNI_placa = :placa";
 
         $stmt = $this->conector->prepare($query);
