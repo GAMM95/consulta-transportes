@@ -43,7 +43,7 @@ class Papeletas
 
   public function obtenerPapeletasNoPagadasPorPlaca($uniPlaca)
   {
-    $query = "SELECT CONCAT(PER_nombre, ' ', PER_apellidos) AS propietario,  CONCAT(FORMAT(PAP_fechaemision, 'dd/MM/yyyy'),' ',PAP_hora) AS fechaEmisionFormateada, UNI_tarjetapropiedad as tarjetaPropiedad, I.INF_descripcion AS infraccion, PAP_monto AS monto, EST_descripcion AS estado
+    $query = "SELECT CONCAT(PER_nombre, ', ', PER_apellidos) AS propietario,  CONCAT(FORMAT(PAP_fechaemision, 'dd/MM/yyyy'),' ',PAP_hora) AS fechaEmisionFormateada, UNI_tarjetapropiedad as tarjetaPropiedad, I.INF_descripcion AS infraccion, PAP_monto AS monto, EST_descripcion AS estado
     FROM PAPELETA P
     INNER JOIN UNIDAD U ON U.UNI_codigo = P.UNI_codigo
     INNER JOIN PERSONA PER ON PER.PER_codigo = U.PRO_codigo

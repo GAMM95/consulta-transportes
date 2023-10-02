@@ -24,8 +24,10 @@ class LoginController
             // Obtén los valores de usuario y contraseña del formulario
             $username = $_POST['username'];
             $password = $_POST['password'];
+            // $nombre = $_GET['nombre'];
 
             // Crea una instancia de la clase Usuario con los valores proporcionados
+            // $usuario = new Usuario($username, $password, $nombre);
             $usuario = new Usuario($username, $password);
 
             // Intenta iniciar sesión con los datos proporcionados
@@ -33,6 +35,7 @@ class LoginController
                 // Si el inicio de sesión es exitoso, inicia la sesión y redirige al menú
                 session_start();
                 $_SESSION['username'] = $username;
+                // $_SESSION['nombre'] = $nombre;
                 header("Location: inicio.php");
                 exit();
             } else {

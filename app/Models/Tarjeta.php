@@ -20,20 +20,17 @@ class Tarjeta
 
     public function obtenerTarjetaPorPlaca($uniPlaca)
     {
-        $query = "SELECT ASO_razonsocial AS asociacion, ASO_ruc AS ruc, 
+        $query = "SELECT  CONCAT(PER_apellidos,', ',PER_nombre) AS propietario, ASO_razonsocial AS asociacion, ASO_ruc AS ruc, UNI_placa,
         TAR_serie AS serie, 
-        FORMAT(TAR_fechaemision, 'dd/MM/yyyy') AS fechaEmisionFormateada,FORMAT(TAR_fechavencimiento, 'dd/MM/yyyy') AS fechaVencimientoFormateada,
-        RES_numero AS numero,
-        UNI_aniofabrica AS anioFabricacion,
-        UNI_motor AS motor, MOD_descripcion AS modelo, 
-        MAR_descripcion AS marca,EST_descripcion AS estado
-                    FROM TARJETA_CIRCULACION  TJ
-                    INNER JOIN UNIDAD U ON U.UNI_codigo=TJ.UNI_codigo
-                    INNER JOIN ASOCIACION A ON A.ASO_codigo=U.ASO_codigo
-                    LEFT JOIN RESOLUCION R ON R.ASO_codigo =A.ASO_codigo
-                    INNER JOIN MODELO M ON M.MOD_codigo = U.MOD_codigo
-                    INNER JOIN MARCA MA ON MA.MAR_codigo=M.MAR_codigo
-                     JOIN ESTADO E ON E.EST_codigo=TJ.TAR_estado
+        FORMAT(TAR_fechaemision, 'dd/MM/yyyy') AS fechaEmisionFormateada,FORMAT(TAR_fechavencimiento, 'dd/MM/yyyy') AS fechaVencimientoFormateada, RES_numero AS numero, UNI_aniofabrica AS anioFabricacion, UNI_motor AS motor, MOD_descripcion AS modelo, MAR_descripcion AS marca,EST_descripcion AS estado
+        FROM TARJETA_CIRCULACION  TJ
+        INNER JOIN UNIDAD U ON U.UNI_codigo=TJ.UNI_codigo
+        INNER JOIN PERSONA PER ON PER.PER_codigo = U.PRO_codigo
+        INNER JOIN ASOCIACION A ON A.ASO_codigo=U.ASO_codigo
+        LEFT JOIN RESOLUCION R ON R.ASO_codigo =A.ASO_codigo
+        INNER JOIN MODELO M ON M.MOD_codigo = U.MOD_codigo
+        INNER JOIN MARCA MA ON MA.MAR_codigo=M.MAR_codigo
+        JOIN ESTADO E ON E.EST_codigo=TJ.TAR_estado
                     WHERE UNI_placa = :s
                     ORDER BY TAR_fechaemision DESC";
 
