@@ -18,7 +18,7 @@
 ### 💻 Desarrollado con
 >Este aplicativo responstive fue desarrollado usando PHP para el backend y HTML y plantillas CSS en el frontend y el IDE Visual Studio Code
 >
-<img src="https://skillicons.dev/icons?i=php,html,css"></img>
+<img src="https://skillicons.dev/icons?i=php,html,css,js"></img>
 
 <!--
 ## 🌐 Descargar Demo
