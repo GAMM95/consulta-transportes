@@ -74,6 +74,24 @@ GO
 -- =================================================================
 -- PROCEDIMIENTO ALMACENADO PARA INICIAR SESION
 -- =================================================================
+CREATE PROCEDURE dbo.SP_Usuario_login
+    @USU_usuario VARCHAR(15),
+    @USU_password VARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT ua.USU_usuario, ua.USU_password, p.PER_nombre
+    FROM USUARIO_APLICATIVO ua
+    INNER JOIN PERSONA p ON p.PER_codigo = ua.PER_codigo
+    WHERE ua.USU_usuario = @USU_usuario AND ua.USU_password = @USU_password;
+END;
+GO
+
+
+
+----- OTRA FORMA DE PROCEDIMIENTO ALMACENADO
+
 create procedure dbo.SP_Usuario_login
     (
     @USU_usuario VARCHAR (15),
@@ -83,11 +101,22 @@ as
 begin
     SET NOCOUNT ON;
     begin
-        select USU_usuario, USU_password, PER_nombre
-        from USUARIO_APLICATIVO ua
-            inner join PERSONA p on p.PER_codigo=ua.PER_codigo
-        where USU_usuario=@USU_usuario and USU_password=@USU_password;
-    end
+        declare @PER_nombre VARCHAR(50);
 
+        select @PER_nombre = p.PER_nombre
+        from USUARIO_APLICATIVO ua
+            inner join PERSONA p on p.PER_codigo = ua.PER_codigo
+        where USU_usuario = @USU_usuario and USU_password = @USU_password;
+
+        if (@PER_nombre is not null)
+        begin
+            -- Inicio de sesión exitoso, almacenar el nombre de la persona en la sesión
+            execute as login = @USU_usuario; -- Para usar el nombre de usuario como contexto de sesión
+            set context_info @PER_nombre;
+            execute as login = null;
+        end
+
+        select @PER_nombre as PER_nombre; -- Esto devuelve el nombre de la persona para verificar el inicio de sesión en tu código de aplicación
+    end
 end;
 go

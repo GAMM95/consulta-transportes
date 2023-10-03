@@ -1,11 +1,14 @@
 <?php
+// Iniciar la sesión
 session_start();
+
 // Verificar si no hay una sesión iniciada
 if (!isset($_SESSION['username'])) {
     header("Location: index.php"); // Redirigir a la página de inicio de sesión si no hay sesión iniciada
     exit();
 }
 
+// Obtener el valor del parámetro 'busqueda' de la URL o establecerlo en una cadena vacía si no existe
 $busqueda = $_GET['busqueda'] ?? '';
 
 // Importar el controlador necesario
@@ -18,14 +21,17 @@ $conector = $conexion->getConexion();
 // Crear instancias de los modelos
 $modelTarjeta = new Tarjeta($conector);
 
+// Crear una instancia del controlador
 $controller = new TarjetaController($modelTarjeta);
 
+// Inicializar la variable para el resultado de la búsqueda
 $resultadoBusqueda = NULL;
 
+// Realizar la búsqueda si se proporciona un valor para 'busqueda'
 if (!empty($busqueda)) {
     $resultadoBusqueda = $controller->consultarTarjeta();
 } else {
-
+    // En caso contrario, no se realiza ninguna búsqueda
 }
 ?>
 

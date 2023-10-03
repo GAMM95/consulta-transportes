@@ -16,15 +16,15 @@
   <link rel="stylesheet" href="./public/styles/login.css">
   <link rel="stylesheet" href="./public/styles/login_responsive.css">
 
-  <!-- Importacion de libreria jQuery -->
+  <!-- Importación de librería jQuery -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-  <!-- Implementacion de funcionalidades para la vista cliente -->
+  <!-- Implementación de funcionalidades para la vista cliente -->
   <script src="app/Views/funciones/password-toggle.js"></script>
 
-  <!-- Importacion de iconos -->
+  <!-- Importación de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <!-- Título de la página -->

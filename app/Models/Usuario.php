@@ -34,6 +34,14 @@ class Usuario
     $stmt->bindParam(':password', $this->password);
     $stmt->execute();
 
-    return $stmt->fetch() !== false;
+    $resultado = $stmt->fetch();
+
+    if ($resultado) {
+      // Inicio de sesión exitoso, almacena el nombre de la persona en la sesión
+      $_SESSION['nombreDePersona'] = $resultado['PER_nombre'];
+      return true;
+    }
+
+    return false;
   }
 }

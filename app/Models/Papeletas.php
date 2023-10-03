@@ -50,7 +50,7 @@ class Papeletas
     INNER JOIN INFRACCION I ON I.INF_codigo = P.INF_codigo
 		INNER JOIN ESTADO E ON E.EST_codigo = P.PAP_estado
     WHERE UNI_placa = :s
-    ORDER BY PAP_fechaemision";
+    ORDER BY PAP_fechaemision DESC";
 
     $stmt = $this->conector->prepare($query);
     $stmt->bindParam("s", $uniPlaca);

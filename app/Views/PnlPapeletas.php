@@ -10,9 +10,11 @@
 	<link rel="stylesheet" href="./public/styles/partials/body.css">
 	<link rel="stylesheet" href="./public/styles/papeletas.css">
 
-	<!-- Importacion de iconos -->
+	<!-- Importación de iconos -->
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<script src="https://cdn.tailwindcss.com"></script>
+
+	<!-- Título de la página -->
 	<title>Consulta Transportes</title>
 </head>
 
@@ -99,7 +101,6 @@
 				</div>
 
 			</div>
-		<?php else : ?>
 		<?php endif; ?>
 
 	</div>

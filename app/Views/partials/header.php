@@ -6,6 +6,9 @@
 <link rel="stylesheet" href="./public/styles/partials/body.css">
 
 
+  <!-- Implementación de funcionalidades para la vista cliente -->
+  <script src="app/Views/funciones/navbar.js"></script>
+
 <!-- Importacion de iconos -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <script src="https://cdn.tailwindcss.com"></script>
@@ -17,7 +20,7 @@
         <div class="relative px-4 py-10 flex justify-between items-center bg-green">
             <div class="titulo">
                 <h2>Bienvenido,
-                    <?php echo $_SESSION['username']; ?>!
+                    <?php echo $_SESSION['nombreDePersona']; ?>!
                     <?php
                     $label = 'Consulta de ';
                     $url = basename($_SERVER["REQUEST_URI"]);
@@ -80,45 +83,3 @@
     </section>
 </body>
 
-<script>
-    // Burger menus
-    document.addEventListener('DOMContentLoaded', function() {
-        // open
-        const burger = document.querySelectorAll('.navbar-burger');
-        const menu = document.querySelectorAll('.navbar-menu');
-
-        if (burger.length && menu.length) {
-            for (var i = 0; i < burger.length; i++) {
-                burger[i].addEventListener('click', function() {
-                    for (var j = 0; j < menu.length; j++) {
-                        menu[j].classList.toggle('hidden');
-                    }
-                });
-            }
-        }
-
-        // close
-        const close = document.querySelectorAll('.navbar-close');
-        const backdrop = document.querySelectorAll('.navbar-backdrop');
-
-        if (close.length) {
-            for (var i = 0; i < close.length; i++) {
-                close[i].addEventListener('click', function() {
-                    for (var j = 0; j < menu.length; j++) {
-                        menu[j].classList.toggle('hidden');
-                    }
-                });
-            }
-        }
-
-        if (backdrop.length) {
-            for (var i = 0; i < backdrop.length; i++) {
-                backdrop[i].addEventListener('click', function() {
-                    for (var j = 0; j < menu.length; j++) {
-                        menu[j].classList.toggle('hidden');
-                    }
-                });
-            }
-        }
-    });
-</script>
