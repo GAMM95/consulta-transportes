@@ -47,7 +47,7 @@
   align-content: center;
 }
 
-.img_logo  {
+.img_logo {
   max-width: 8rem;
   margin-right: 0.5rem;
   border-radius: 2px;
@@ -62,7 +62,7 @@
   font-size: var(--h3FontSize);
   color: var(--blackColor);
   padding: 0 1.5rem 1.5rem;
-  
+
   padding-bottom: 4rem;
 }
 
@@ -121,22 +121,24 @@ h3 {
   cursor: pointer;
   border-radius: 8px;
   box-shadow: 0 2px 4px var(--inputColor);
-  padding: .8rem 1rem;
+  padding: 0.8rem 1rem;
   color: var(--textColor);
   justify-content: center;
   margin: 5rem 2rem 0 2rem;
 }
+.btn {
+  background: var(--paleGreen);
+}
 
 .btn .icon {
-  margin-left: .5rem;
-  padding-block: .4rem;
+  margin-left: 0.5rem;
+  padding-top: 1rem;
 }
 
 .logout:hover {
-  background: var(--paleGreen);
+  background: var(--hoverColor);
   color: var(--primaryColor);
 }
-
 
 .log {
   display: flex;
@@ -155,3 +157,20 @@ a {
   padding-block: 0.5rem;
 }
 
+@media screen and (min-width:200px) and (max-width:533px){
+  .btn .icon {
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 534px) and (max-width: 991px) {
+  .btn .icon {
+    padding-top: .5rem;
+  }
+}
+
+@media screen and (min-width:992px) and (max-width:1024px) {
+  .btn .icon {
+    padding-top: .4rem;
+  }
+}

@@ -25,7 +25,7 @@
 		<div class="tarjetas_content mb-3">
 			<form action="tarjetas_de_circulacion.php" method="GET" class="form mb-10 ">
 				<div class="input flex p-4">
-					<input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
+					<input type="text" id="busqueda" name="busqueda" placeholder="Placa del veh&iacute;culo" required focus>
 					<button type="submit" class='btn btn-form  flex'>Buscar</button>
 				</div>
 			</form>
@@ -62,7 +62,7 @@
 
 							<figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
 								<blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
-									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">ASOCIACION</h3>
+									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">ASOCIACI&Oacute;N</h3>
 									<p class="my-4"><?php echo $resultadoBusqueda[0]['asociacion']; ?></p>
 								</blockquote>
 							</figure>
@@ -84,7 +84,7 @@
 
 							<figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
 								<blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
-									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">FECHA DE EMISIÓN</h3>
+									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">FECHA DE EMISI&Oacute;N</h3>
 									<p class="my-4"><?php echo $resultadoBusqueda[0]['fechaEmisionFormateada']; ?>
 								</blockquote>
 							</figure>

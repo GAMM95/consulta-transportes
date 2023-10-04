@@ -29,7 +29,7 @@
     <div class="paraderos_content mb-3">
       <form action="paraderos.php" method="GET" class="form">
         <div class="input flex">
-          <input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
+          <input type="text" id="busqueda" name="busqueda" placeholder="Placa del veh&iacute;culo" required focus>
           <button type="submit" class='btn btn-form  flex'>Buscar</button>
         </div>
       </form>
@@ -54,10 +54,10 @@
                       Conductor
                     </th>
                     <th scope="col" class="px-6 py-3">
-                      Asociación
+                      Asociaci&oacute;n
                     </th>
                     <th scope="col" class="px-6 py-3">
-                      Dirección
+                      Direcci&oacute;n
                     </th>
                     <th scope="col" class="px-6 py-3">
                       Referencia

@@ -28,7 +28,7 @@
 		<div class="papeletas_content mb-3">
 			<form action="papeletas.php" method="GET" class="form mb-10">
 				<div class="input flex">
-					<input type="text" id="busqueda" name="busqueda" placeholder="Placa del vehículo" required focus>
+					<input type="text" id="busqueda" name="busqueda" placeholder="Placa del veh&iacute;culo" required focus>
 					<button type="submit" class='btn btn-form  flex'>Buscar</button>
 				</div>
 			</form>
@@ -54,13 +54,13 @@
 											Propietario
 										</th>
 										<th scope="col" class="px-6 py-3">
-											Fecha de Emisión
+											Fecha de Emisi&oacute;n
 										</th>
 										<th scope="col" class="px-6 py-3">
 											Tarjeta de Propiedad
 										</th>
 										<th scope="col" class="px-6 py-3">
-											Infracción
+											Infracci&oacute;n
 										</th>
 										<th scope="col" class="px-6 py-3">
 											Monto

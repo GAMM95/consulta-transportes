@@ -42,7 +42,7 @@
 
         <!-- Texto descriptivo -->
         <div class="textDiv">
-          <h2 class='titulo'>SubGerencia de Transporte, Tránsito y Seguridad Vial</h2>
+          <h2 class='titulo'>Sub Gerencia de Transporte, Tr&aacute;nsito y Seguridad Vial</h2>
           <p>Sistema de consultas</p>
         </div>
       </div>
@@ -52,7 +52,7 @@
       $state = $_GET['state'] ?? '';
       if ($state === 'failed') {
         echo "<script>
-            toastr.error('Credenciales incorrectas.', 'Inicio de Sesión Fallido.');
+            toastr.error('Credenciales incorrectas.', 'Inicio de sesion fallido.');
             </script>";
       }
       ?>
@@ -77,18 +77,18 @@
           </div>
 
           <div class="inputDiv">
-            <label for="password">Contraseña</label>
+            <label for="password">Contrase&ntilde;a</label>
             <div class="input flex">
               <i class='bx bxs-lock icon-input icon'></i>
-              <input type="password" id="password" placeholder="Ingrese su contraseña" name="password" required />
+              <input type="password" id="password" placeholder="Ingrese su contrase&ntilde;a" name="password" required />
               <!-- Icono para mostrar/ocultar contraseña -->
               <div id="togglePassword" class="show-hide-link icon"><i class='bx bx-show icon'></i></div>
             </div>
           </div>
 
           <!-- Botón de inicio de sesión -->
-          <button type='submit' class='btn btn-form flex' name='btnIniciarSesion' content='Iniciar Sesión'>
-            <span>Iniciar Sesión</span>
+          <button type='submit' class='btn btn-form flex' name='btnIniciarSesion' content='Iniciar Sesi&oacute;n'>
+            <span>Iniciar Sesi&oacute;n</span>
           </button>
         </form>
       </div>
