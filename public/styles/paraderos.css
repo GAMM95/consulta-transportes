@@ -37,7 +37,7 @@ input {
   background: none;
   outline: none;
   border: none;
-  width: 250px;
+  width: 18rem;
 }
 /* Estilos para el contenedor de los campos de entrada */
 .input {
@@ -45,7 +45,7 @@ input {
   padding: 0.4rem;
   background: var(--inputColor);
   border-radius: 10px;
-  width: 20rem;
+  width: 19rem;
   /* margin-right: 4rem; */
 }
 

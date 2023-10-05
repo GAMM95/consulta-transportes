@@ -25,6 +25,13 @@
 		include("app/Views/partials/header.php")
 		?>
 
+		<!-- Titulo de consulta -->
+		<div class="consulta">
+			<spam class="tituloConsulta">
+				CONSULTA DE PAPELETAS
+			</spam>
+		</div>
+
 		<div class="papeletas_content mb-3">
 			<form action="papeletas.php" method="GET" class="form mb-10">
 				<div class="input flex">

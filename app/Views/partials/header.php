@@ -15,24 +15,9 @@
 
 <body>
 	<section class="topSection">
-		<div class="relative px-3 py-3 flex justify-between items-center bg-green">
-			<div class="titulo">
-				<h2>Bienvenido,
-					<?php echo $_SESSION['nombreDePersona']; ?>!
-					<?php
-					// $label = 'Consulta de ';
-					// $url = basename($_SERVER["REQUEST_URI"]);
-					// $url = str_replace('.php', '', $url);
-					// $url = ucwords($url);
-					// $url = strtok($url, "?");
-					// $label .= $url;
-					// echo ' | ';
-					// echo $label;
-					?>
-				</h2>
-			</div>
 
-			
+		<!-- icono de menu -->
+		<div class="relative px-3 py-3 flex justify-between items-center bg-green">
 			<div class="lg:hidden">
 				<button class="navbar-burger flex items-center text-green-800 p-3">
 					<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -42,6 +27,34 @@
 				</button>
 			</div>
 
-
+			<!-- Saludo -->
+			<div class="titulo">
+				<h2 id="saludo">
+					<?php echo $_SESSION['nombreDePersona']; ?>!
+				</h2>
+			</div>
 	</section>
+
+	<!-- Script para mostrar saludo segun horario -->
+	<script>
+		// Obtener la hora actual del usuario
+		const horaActual = new Date().getHours();
+
+		// Obtener el elemento donde se mostrará el saludo
+		const saludoElemento = document.getElementById('saludo');
+
+		// Definir los saludos según la hora del día
+		let saludo;
+		if (horaActual >= 6 && horaActual < 12) {
+			saludo = '¡Buenos días, <?php echo $_SESSION['nombreDePersona']; ?>!';
+		} else if (horaActual >= 12 && horaActual < 18) {
+			saludo = '¡Buenas tardes, <?php echo $_SESSION['nombreDePersona']; ?>!';
+		} else {
+			saludo = '¡Buenas noches, <?php echo $_SESSION['nombreDePersona']; ?>!';
+		}
+
+		// Actualizar el contenido del elemento con el saludo
+		saludoElemento.textContent = saludo;
+	</script>
+
 </body>

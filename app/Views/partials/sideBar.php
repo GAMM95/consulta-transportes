@@ -93,8 +93,8 @@
 
 	<div class="navbar-menu relative z-50 hidden hide-navbar">
 		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-		<nav class="fixed top-0 right-0 bottom-0 flex flex-col w-3/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto" style="scroll-behavior: smooth;">
-			<div class="flex items-center justify-start mb-8 w-full">
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-3/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto" style="scroll-behavior: smooth;">
+			<div class="flex items-center justify-end mb-8 w-full">
 				<button class="navbar-close">
 					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -107,7 +107,7 @@
 						<a href="inicio.php" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded" href="#">Inicio</a>
 					</li>
 					<li class="mb-1">
-						<a href="tarjetas_de_circulacion.php" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded" href="#">Tarjetas de Circulación</a>
+						<a href="tarjetas_de_circulacion.php" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded" href="#">Tarjetas de Circulaci&oacute;n</a>
 					</li>
 					<li class="mb-1">
 						<a href="papeletas.php" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded" href="#">Papeletas</a>

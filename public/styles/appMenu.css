@@ -71,6 +71,7 @@ img {
   box-shadow: 0 2px 4px var(--inputColor);
   padding: 0.8rem 1rem;
   color: var(--textColor);
+  margin-right: 2rem;
 }
 
 .btn .icon {

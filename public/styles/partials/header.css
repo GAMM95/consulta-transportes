@@ -20,7 +20,7 @@
   --smallestFontSize: 0.75rem;
 }
 
-body{
+body {
   width: 100%;
 }
 
@@ -34,15 +34,32 @@ body{
 
 h2 {
   color: var(--primaryColor);
+  /* color: var(--paleGreen); */
   font-weight: 700;
 }
 
 .topSection {
-  background: var(--hoverColor);
+  /* background: var(--hoverColor); */
+  background: linear-gradient(to bottom,var(--hoverColor), var(--paleGreen));
   /* height: auto; */
   width: 100%;
 
   /* position: absolute; */
 }
 
-/* nuevo comentario */
+.consulta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, var(--paleGreen),var(--inputColor));
+  /* background: var(--bgColor); */
+  padding: .5rem 1rem;
+  width: 100%;
+}
+
+.tituloConsulta {
+  align-items: center;
+  font-weight: 700;
+  font-size: var(--h2FontSize);
+  color: var(--primaryColor);
+}
