@@ -126,13 +126,14 @@ h3 {
   justify-content: center;
   margin: 5rem 2rem 0 2rem;
 }
+
 .btn {
   background: var(--paleGreen);
 }
 
 .btn .icon {
   margin-left: 0.5rem;
-  padding-top: 1rem;
+  padding-top: .5rem;
 }
 
 .logout:hover {
@@ -155,13 +156,28 @@ a {
   padding-bottom: 1.5rem;
   margin-bottom: 2px;
   padding-block: 0.5rem;
+  font-weight: 550;
 }
 
-@media screen and (min-width:200px) and (max-width:533px){
+
+/* Agrega esta clase para mostrar el navbar */
+/* .show-navbar {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+} */
+
+/* Agrega esta clase para ocultar el navbar hacia la izquierda */
+/* .hide-navbar {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+} */
+
+
+/* @media screen and (min-width:200px) and (max-width:533px) {
   .btn .icon {
-    padding-top: 1rem;
+    padding-top: .1rem;
   }
-}
+} */
 
 @media screen and (min-width: 534px) and (max-width: 991px) {
   .btn .icon {
