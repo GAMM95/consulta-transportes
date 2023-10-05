@@ -43,10 +43,10 @@ class Papeletas
 
   public function obtenerPapeletasNoPagadasPorPlaca($uniPlaca)
   {
-    $query = "SELECT (PER_nombre+ ', '+ PER_apellidos) AS propietario,  CONVERT(VARCHAR(10),PAP_fechaemision,103) +' '+PAP_hora AS fechaEmisionFormateada, UNI_tarjetapropiedad as tarjetaPropiedad, I.INF_descripcion AS infraccion, PAP_monto AS monto, EST_descripcion AS estado
+    $query = "SELECT (PER_nombre+ ', '+ PER_apellidos) AS conductor,  CONVERT(VARCHAR(10),PAP_fechaemision,103) +' '+PAP_hora AS fechaEmisionFormateada, PAP_serie as serie, UNI_tarjetapropiedad as tarjetaPropiedad, I.INF_codigodesc as codigoInfraccion, I.INF_descripcion AS infraccion, PAP_monto AS monto, EST_descripcion AS estado
     FROM PAPELETA P
     INNER JOIN UNIDAD U ON U.UNI_codigo = P.UNI_codigo
-    INNER JOIN PERSONA PER ON PER.PER_codigo = U.PRO_codigo
+    INNER JOIN PERSONA PER ON PER.PER_codigo = U.CON_codigo
     INNER JOIN INFRACCION I ON I.INF_codigo = P.INF_codigo
 		INNER JOIN ESTADO E ON E.EST_codigo = P.PAP_estado
     WHERE UNI_placa = :s

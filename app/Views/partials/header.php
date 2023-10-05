@@ -15,19 +15,19 @@
 
 <body>
 	<section class="topSection">
-		<div class="relative px-4 py-10 flex justify-between items-center bg-green">
+		<div class="relative px-3 py-3 flex justify-between items-center bg-green">
 			<div class="titulo">
 				<h2>Bienvenido,
 					<?php echo $_SESSION['nombreDePersona']; ?>!
 					<?php
-					$label = 'Consulta de ';
-					$url = basename($_SERVER["REQUEST_URI"]);
-					$url = str_replace('.php', '', $url);
-					$url = ucwords($url);
-					$url = strtok($url, "?");
-					$label .= $url;
-					echo ' | ';
-					echo $label;
+					// $label = 'Consulta de ';
+					// $url = basename($_SERVER["REQUEST_URI"]);
+					// $url = str_replace('.php', '', $url);
+					// $url = ucwords($url);
+					// $url = strtok($url, "?");
+					// $label .= $url;
+					// echo ' | ';
+					// echo $label;
 					?>
 				</h2>
 			</div>
