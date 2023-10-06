@@ -10,9 +10,6 @@
   <link rel="stylesheet" href="./public/styles/partials/body.css">
   <link rel="stylesheet" href="./public/styles/inicio.css">
 
-  <!-- Implementacion de funcionalidades para la vista cliente -->
-  <!-- <script src="app/Views/funciones/carrusel.js"></script> -->
-
   <!-- Importacion de iconos -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>Consulta Transportes</title>
@@ -38,7 +35,7 @@
             <img src="./public/assets/asociaciones.png" class="imgCardLogo" alt="Imagen de la tarjeta">
           </div>
           <!-- Cantidad Asociaciones -->
-          <h2>Asociaciones</h2>
+          <h2 class="tituloReporte">Asociaciones</h2>
           <p class="cantidad_total">
             <?php echo $cantidadAsociaciones; ?>
           </p>
@@ -51,7 +48,7 @@
             <img src="./public/assets/mototaxi.png" class="imgCardLogo" alt="Imagen de la tarjeta">
           </div>
           <!-- Cantidad Unidades -->
-          <h2>Unidades</h2>
+          <h2 class="tituloReporte">Unidades</h2>
           <p class="cantidad_total">
             <?php echo $cantidadUnidades; ?>
           </p>
@@ -63,7 +60,7 @@
             <img src="./public/assets/papeleta.png" class="imgCardLogo" alt="Imagen de la tarjeta">
           </div>
           <!-- Cantidad Papeletas Sin Pagar -->
-          <h2>Papeletas Sin Pagar</h2>
+          <h2 class="tituloReporte">Papeletas Sin Pagar</h2>
           <p class="cantidad_total">
             <?php echo $cantidadPapeletas; ?>
           </p>

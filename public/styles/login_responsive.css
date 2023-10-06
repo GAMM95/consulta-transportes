@@ -2,7 +2,7 @@
 /* For large devices */
 @media screen and (max-width: 602px) {
   .container-login {
-    height: 100%;
+    height: 90%;
     width: 100%;
     flex-direction: column;
     padding: .5rem;

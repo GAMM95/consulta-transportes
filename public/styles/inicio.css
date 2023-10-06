@@ -82,6 +82,9 @@
   margin: 10px 0;
 }
 
+.tituloReporte{ 
+  color: #777;
+}
 .card p {
   font-size: 2rem;
   color: #777;
@@ -101,16 +104,15 @@
   /* Otras propiedades de estilo para el panel si es necesario */
 }
 
-@media screen and (min-width:200px) and (max-width:463px){
-
-  .card{
+@media screen and (min-width: 200px) and (max-width: 463px) {
+  .card {
     max-width: 200px;
   }
   .sectionCard {
     padding-top: 6rem;
     padding-bottom: 1rem;
   }
-  .card h2{
+  .card h2 {
     font-size: 1rem;
   }
   .card p {
@@ -127,14 +129,14 @@
     height: 100%;
     overflow: overlay;
   } */
-  .card{
+  .card {
     max-width: 200px;
   }
   .sectionCard {
     padding-top: 5rem;
     padding-bottom: 1rem;
   }
-  .card h2{
+  .card h2 {
     font-size: 1rem;
   }
   .card p {
@@ -142,19 +144,19 @@
   }
 }
 
-@media screen and (min-width:992px) and (max-width:1024px) {
+@media screen and (min-width: 992px) and (max-width: 1024px) {
   .sectionCard {
     padding-top: 9rem;
     padding-bottom: 1rem;
   }
-  .card{
+  .card {
     max-width: 220px;
   }
   .sectionCard {
     padding-top: 5rem;
     padding-bottom: 1rem;
   }
-  .card h2{
+  .card h2 {
     font-size: 1.2rem;
   }
   .card p {

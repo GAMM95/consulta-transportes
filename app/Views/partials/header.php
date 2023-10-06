@@ -19,7 +19,7 @@
 		<!-- icono de menu -->
 		<div class="relative px-3 py-3 flex justify-between items-center bg-green">
 			<div class="lg:hidden">
-				<button class="navbar-burger flex items-center text-green-800 p-3">
+				<button class="navbar-burger flex items-center text-white-800 p-3">
 					<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 						<title>Mobile menu</title>
 						<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
