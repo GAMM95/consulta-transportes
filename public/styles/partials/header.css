@@ -41,8 +41,8 @@ h2 {
 
 .topSection {
   /* background: var(--hoverColor); */
-  /* background: linear-gradient(to bottom,var(--hoverColor), var(--paleGreen)); */
-  background: linear-gradient(to bottom, #232526, #414345);
+  background: linear-gradient(to bottom,var(--hoverColor), var(--paleGreen));
+  /* background: linear-gradient(to bottom, #232526, #414345); */
   /* height: auto; */
   width: 100%;
 
