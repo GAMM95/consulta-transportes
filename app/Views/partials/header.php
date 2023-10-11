@@ -46,7 +46,7 @@
 		// Definir los saludos según la hora del día
 		let saludo;
 		if (horaActual >= 6 && horaActual < 12) {
-			saludo = '¡Buenos días, <?php echo $_SESSION['nombreDePersona']; ?>!';
+			saludo = '¡Buenos dias, <?php echo $_SESSION['nombreDePersona']; ?>!';
 		} else if (horaActual >= 12 && horaActual < 18) {
 			saludo = '¡Buenas tardes, <?php echo $_SESSION['nombreDePersona']; ?>!';
 		} else {

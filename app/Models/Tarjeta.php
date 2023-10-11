@@ -21,8 +21,8 @@ class Tarjeta
 	public function obtenerTarjetaPorPlaca($uniPlaca)
 	{
 		$query = "SELECT U.UNI_placa AS placa, TAR_serie AS numTarjeta,
-        FORMAT(TAR_fechaemision, 'dd/MM/yyyy') AS fechaEmision, FORMAT(TAR_fechavencimiento, 'dd/MM/yyyy') AS fechaCaducidad, EST_descripcion AS estado, ASO_razonsocial AS asociacion,
-        CONCAT(PER_apellidos,', ',PER_nombre) AS propietario
+        CONVERT(VARCHAR(10),TAR_fechaemision, 103) AS fechaEmision, CONVERT(VARCHAR(10),TAR_fechavencimiento, 103) AS fechaCaducidad, EST_descripcion AS estado, ASO_razonsocial AS asociacion,
+        (PER_apellidos +', '+PER_nombre) AS propietario
         FROM TARJETA_CIRCULACION  TJ
         INNER JOIN UNIDAD U ON U.UNI_codigo=TJ.UNI_codigo
         INNER JOIN PERSONA PER ON PER.PER_codigo = U.PRO_codigo
