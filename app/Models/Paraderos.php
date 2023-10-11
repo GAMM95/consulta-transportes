@@ -17,7 +17,7 @@ class Paraderos
 	public function obtenerParaderosporplaca($uniPlaca)
 	{
 		// Consulta SQL para obtener información de paraderos
-		$query = "SELECT DISTINCT (P.PER_apellidos + ', '+ P.PER_nombre) AS conductor, A.ASO_razonsocial as asociacion, rp.PAR_descripcion as direccion, rp.PAR_referencia as referencia
+		$query = "SELECT DISTINCT U.UNI_placa AS placa, (P.PER_apellidos + ', '+ P.PER_nombre) AS conductor, A.ASO_razonsocial as asociacion, rp.PAR_descripcion as direccion, rp.PAR_referencia as referencia
                 FROM UNIDAD U
                 LEFT JOIN ASOCIACION A ON U.UNI_codigo = A.ASO_codigo
                 INNER JOIN PERSONA P ON P.PER_codigo = U.PRO_codigo

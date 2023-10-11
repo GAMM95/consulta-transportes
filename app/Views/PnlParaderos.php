@@ -48,15 +48,20 @@
         <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <?php if (empty($resultadoBusqueda)) : ?>
             <p class="mb-2 text-2xl  tracking-tight text-gray-900 dark:text-white">
-              No se hallaron resultados para la placa <span class="font-semibold"><?php echo $busqueda; ?></span>.
+              No se encontraron paraderos registrados para la placa <span class="font-semibold"><?php echo $busqueda; ?></span>.
             </p>
           <?php else : ?>
-            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Resultados</h5>
+            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+              Resultados para <span class="font-semibold"><?php echo $busqueda; ?></span>
+            </h5>
 
             <div class="overflow-x-auto">
               <table class="w-full mt-8 rounded text-sm text-left text-gray-500">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
+                    <!-- <th scope="col" class="px-6 py-3">
+                      Placa
+                    </th> -->
                     <th scope="col" class="px-6 py-3">
                       Conductor
                     </th>

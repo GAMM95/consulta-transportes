@@ -28,10 +28,10 @@ WHERE PAP_fechapago IS NULL;
 -- =================================================================
 -- 1.- CONSULTA DE MOSTRAR DATOS DE LA ULTIMA TARJETA DE CIRCULACION
 -- =================================================================
-SELECT CONCAT(PER_apellidos,', ',PER_nombre) AS propietario, ASO_razonsocial AS asociacion, ASO_ruc AS ruc, UNI_placa,
-    TAR_serie AS serie,
-    FORMAT(TAR_fechaemision, 'dd/MM/yyyy') AS fechaEmisionFormateada, FORMAT(TAR_fechavencimiento, 'dd/MM/yyyy') AS fechaVencimientoFormateada, RES_numero AS numero, UNI_aniofabrica AS anioFabricacion, UNI_motor AS motor, MOD_descripcion AS modelo, MAR_descripcion AS marca, EST_descripcion AS estado
-FROM TARJETA_CIRCULACION  TJ
+SELECT U.UNI_placa AS placa, TAR_serie AS numTarjeta,
+    FORMAT(TAR_fechaemision, 'dd/MM/yyyy') AS fechaEmision, FORMAT(TAR_fechavencimiento, 'dd/MM/yyyy') AS fechaCaducidad, EST_descripcion AS estado, ASO_razonsocial AS asociacion,
+    CONCAT(PER_apellidos,', ',PER_nombre) AS propietario
+    FROM TARJETA_CIRCULACION  TJ
     INNER JOIN UNIDAD U ON U.UNI_codigo=TJ.UNI_codigo
     INNER JOIN PERSONA PER ON PER.PER_codigo = U.PRO_codigo
     INNER JOIN ASOCIACION A ON A.ASO_codigo=U.ASO_codigo
@@ -76,7 +76,7 @@ FROM PAPELETA P
     INNER JOIN PERSONA PER ON PER.PER_codigo = U.PRO_codigo
     INNER JOIN INFRACCION I ON I.INF_codigo = P.INF_codigo
     INNER JOIN ESTADO E ON E.EST_codigo = P.PAP_estado
-WHERE UNI_placa IN ('NC-68148')
+WHERE UNI_placa IN ('NC-68148') AND PAP_fechapago IS NULL
 ORDER BY PAP_fechaemision
 GO
 
@@ -182,3 +182,6 @@ GO
 -- go
 
 
+
+SELECT *
+FROM TARJETA_CIRCULACION

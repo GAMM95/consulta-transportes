@@ -17,7 +17,7 @@
 	<section class="topSection">
 
 		<!-- icono de menu -->
-		<div class="relative px-3 py-3 flex bg-green">
+		<div class="relative px-3 py-3 flex">
 			<div class="lg:hidden">
 				<button class="navbar-burger flex items-center text-white-800 p-3">
 					<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

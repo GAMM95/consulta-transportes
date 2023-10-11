@@ -48,10 +48,13 @@
 				<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 					<?php if (empty($resultadoBusqueda)) : ?>
 						<p class="mb-2 text-2xl  tracking-tight text-gray-900 dark:text-white">
-							No se hallaron resultados para la placa <span class="font-semibold"><?php echo $busqueda; ?></span>.
+							No se encontraron papeletas pendientes de pago de la placa <span class="font-semibold"><?php echo $busqueda; ?></span>.
 						</p>
 					<?php else : ?>
-						<h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Resultados</h5>
+						<h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+							Resultados para 
+							<span class="font-semibold"><?php echo $busqueda; ?></span>
+						</h5>
 
 						<div class="overflow-x-auto">
 							<table class="w-full mt-8 rounded text-sm text-left text-gray-500">
@@ -93,14 +96,12 @@
 											<td class="px-6 py-4 dark:text-white">
 												<?php echo $papeleta['tarjetaPropiedad']; ?>
 											</td>
-
 											<td class="px-6 py-4 dark:text-white">
 												<?php echo $papeleta['serie']; ?>
 											</td>
 											<td class="px-6 py-4 dark:text-white">
 												<?php echo $papeleta['fechaEmisionFormateada']; ?>
 											</td>
-
 											<td class="px-6 py-4 dark:text-white">
 												<?php echo $papeleta['codigoInfraccion']; ?>
 											</td>

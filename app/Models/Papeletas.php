@@ -49,7 +49,7 @@ class Papeletas
     INNER JOIN PERSONA PER ON PER.PER_codigo = U.CON_codigo
     INNER JOIN INFRACCION I ON I.INF_codigo = P.INF_codigo
 		INNER JOIN ESTADO E ON E.EST_codigo = P.PAP_estado
-    WHERE UNI_placa = :s
+    WHERE UNI_placa = :s AND PAP_fechapago IS NULL
     ORDER BY PAP_fechaemision DESC";
 
     $stmt = $this->conector->prepare($query);

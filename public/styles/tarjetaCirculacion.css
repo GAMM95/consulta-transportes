@@ -45,7 +45,6 @@ input {
   gap: 0.5rem;
   padding: 0.4rem;
   background: var(--inputColor);
-  /* background:#373B44; */
   border-radius: 10px;
   width: 19rem;
 }
