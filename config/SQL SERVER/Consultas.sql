@@ -31,7 +31,7 @@ WHERE PAP_fechapago IS NULL;
 SELECT U.UNI_placa AS placa, TAR_serie AS numTarjeta,
     FORMAT(TAR_fechaemision, 'dd/MM/yyyy') AS fechaEmision, FORMAT(TAR_fechavencimiento, 'dd/MM/yyyy') AS fechaCaducidad, EST_descripcion AS estado, ASO_razonsocial AS asociacion,
     CONCAT(PER_apellidos,', ',PER_nombre) AS propietario
-    FROM TARJETA_CIRCULACION  TJ
+FROM TARJETA_CIRCULACION  TJ
     INNER JOIN UNIDAD U ON U.UNI_codigo=TJ.UNI_codigo
     INNER JOIN PERSONA PER ON PER.PER_codigo = U.PRO_codigo
     INNER JOIN ASOCIACION A ON A.ASO_codigo=U.ASO_codigo
@@ -181,7 +181,21 @@ GO
 -- end;
 -- go
 
+/*
+------- CONSULTA DE VALIDACION DE PLACA -------------------
+select count(UNI_codigo) as placa from UNIDAD
+where UNI_placa = '8596-1T'
 
+ p $sql = "SELECT count(UNI_codigo) as placa_count FROM UNIDAD WHERE UNI_placa = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $placa);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-SELECT *
-FROM TARJETA_CIRCULACION
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        return $row["placa_count"];
+    } else {
+        return 1;
+    }
+*/
