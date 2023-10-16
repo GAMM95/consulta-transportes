@@ -61,11 +61,19 @@
 								</blockquote>
 							</figure>
 
+							<!-- MOSTRAR NUMERO DE UNIDAD -->
+							<figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
+								<blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
+									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">N° UNIDAD</h3>
+									<p class="my-4"><?php echo $resultadoBusqueda[0]['numUnidad']; ?></p>
+								</blockquote>
+							</figure>
+
 							<!-- MOSTRAR NUMERO DE TARJETA -->
 							<figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
 								<blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
-									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">N° TARJETA</h3>
-									<p class="my-4"><?php echo $resultadoBusqueda[0]['numTarjeta']; ?></p>
+									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">TARJETA CIRCULACI&Oacute;N</h3>
+									<p class="my-4"><?php echo $resultadoBusqueda[0]['tarjetaCirculacion']; ?></p>
 								</blockquote>
 							</figure>
 
@@ -80,8 +88,8 @@
 							<!-- MOSTRAR FECHA DE CADUCIDAD -->
 							<figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
 								<blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
-									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">FECHA DE CADUCIDAD</h3>
-									<p class="my-4"><?php echo $resultadoBusqueda[0]['fechaCaducidad']; ?></p>
+									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">ASEGURADORA</h3>
+									<p class="my-4"><?php echo $resultadoBusqueda[0]['aseguradora']; ?></p>
 								</blockquote>
 							</figure>
 
@@ -93,7 +101,7 @@
 							</figure>
 
 							<!-- MOSTRAR NOMBRE DE ASOCIACION -->
-							<figure class="flex flex-col items-center justify-center p-2 text-center bg-white border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+							<figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
 								<blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
 									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">ASOCIACI&Oacute;N</h3>
 									<p class="my-4"><?php echo $resultadoBusqueda[0]['asociacion']; ?></p>
@@ -101,7 +109,7 @@
 							</figure>
 
 							<!-- MOSTRAR NOMBRE DEL PROPIETARIO -->
-							<figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+							<figure class="flex flex-col items-center justify-center p-2 text-center bg-white border  rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
 								<blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
 									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">PROPIETARIO</h3>
 									<p class="my-4"><?php echo $resultadoBusqueda[0]['propietario']; ?>

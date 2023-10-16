@@ -90,7 +90,8 @@
 }
 
 .menuLink {
-  color: var(--greyText);
+  /* color: var(--blackColor); */
+  color: #777;
   font-weight: 500;
   transition: 0s ease;
 }
@@ -128,7 +129,7 @@ h3 {
 }
 
 .btn {
-  background: var(--paleGreen);
+  background: var(--hoverColor);
 }
 
 .btn .icon {
@@ -159,6 +160,9 @@ a {
   font-weight: 550;
 }
 
+.smallText{
+  color: #777;
+}
 
 /* Agrega esta clase para mostrar el navbar */
 /* .show-navbar {

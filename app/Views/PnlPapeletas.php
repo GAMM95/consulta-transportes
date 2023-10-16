@@ -52,7 +52,7 @@
 						</p>
 					<?php else : ?>
 						<h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-							Resultados para 
+							Resultados para
 							<span class="font-semibold"><?php echo $busqueda; ?></span>
 						</h5>
 
@@ -77,12 +77,6 @@
 											C&oacute;digo de Infracci&oacute;n
 										</th>
 										<th scope="col" class="px-6 py-3">
-											Infracci&oacute;n
-										</th>
-										<th scope="col" class="px-6 py-3">
-											Monto
-										</th>
-										<th scope="col" class="px-6 py-3">
 											Estado
 										</th>
 									</tr>
@@ -90,10 +84,10 @@
 								<tbody>
 									<?php foreach ($resultadoBusqueda as $papeleta) : ?>
 										<tr class=" bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-											<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-normal overflow-ellipsis dark:text-white">
+											<th scope="row" class="px-8 py-4 font-medium text-gray-900 whitespace-normal overflow-ellipsis dark:text-white">
 												<?php echo $papeleta['conductor']; ?>
 											</th>
-											<td class="px-6 py-4 dark:text-white">
+											<td class="px-8 py-4 dark:text-white">
 												<?php echo $papeleta['tarjetaPropiedad']; ?>
 											</td>
 											<td class="px-6 py-4 dark:text-white">
@@ -104,12 +98,6 @@
 											</td>
 											<td class="px-6 py-4 dark:text-white">
 												<?php echo $papeleta['codigoInfraccion']; ?>
-											</td>
-											<td class="px-6 py-4 dark:text-white">
-												<?php echo $papeleta['infraccion']; ?>
-											</td>
-											<td class="px-6 py-4 dark:text-white">
-												<?php echo $papeleta['monto']; ?>
 											</td>
 											<td class="px-6 py-4 dark:text-white">
 												<?php echo $papeleta['estado']; ?>

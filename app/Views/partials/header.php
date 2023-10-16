@@ -46,11 +46,14 @@
 		// Definir los saludos según la hora del día
 		let saludo;
 		if (horaActual >= 6 && horaActual < 12) {
-			saludo = '¡Buenos dias, <?php echo $_SESSION['nombreDePersona']; ?>!';
+			//saludo = '¡Buenos dias, <?php echo $_SESSION['nombreDePersona']; ?>!';
+			saludo = '<?php echo utf8_decode("¡Buenos dias, " . $_SESSION['nombreDePersona'] . "!"); ?>';
 		} else if (horaActual >= 12 && horaActual < 18) {
-			saludo = '¡Buenas tardes, <?php echo $_SESSION['nombreDePersona']; ?>!';
+			//saludo = '¡Buenas tardes, <?php echo $_SESSION['nombreDePersona']; ?>!';
+			saludo = '<?php echo utf8_decode("¡Buenas tardes, " . $_SESSION['nombreDePersona'] . "!"); ?>';
 		} else {
-			saludo = '¡Buenas noches, <?php echo $_SESSION['nombreDePersona']; ?>!';
+			//saludo = '¡Buenas noches, <?php echo $_SESSION['nombreDePersona']; ?>!';
+			saludo = '<?php echo utf8_decode("¡Buenas noches, " . $_SESSION['nombreDePersona'] . "!"); ?>';
 		}
 
 		// Actualizar el contenido del elemento con el saludo

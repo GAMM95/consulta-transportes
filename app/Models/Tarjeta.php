@@ -20,17 +20,21 @@ class Tarjeta
 
 	public function obtenerTarjetaPorPlaca($uniPlaca)
 	{
-		$query = "SELECT U.UNI_placa AS placa, TAR_serie AS numTarjeta,
-        CONVERT(VARCHAR(10),TAR_fechaemision, 103) AS fechaEmision, CONVERT(VARCHAR(10),TAR_fechavencimiento, 103) AS fechaCaducidad, EST_descripcion AS estado, ASO_razonsocial AS asociacion,
-        (PER_apellidos +', '+PER_nombre) AS propietario
-        FROM TARJETA_CIRCULACION  TJ
-        INNER JOIN UNIDAD U ON U.UNI_codigo=TJ.UNI_codigo
-        INNER JOIN PERSONA PER ON PER.PER_codigo = U.PRO_codigo
-        INNER JOIN ASOCIACION A ON A.ASO_codigo=U.ASO_codigo
-        LEFT JOIN RESOLUCION R ON R.ASO_codigo =A.ASO_codigo
-        INNER JOIN MODELO M ON M.MOD_codigo = U.MOD_codigo
-        INNER JOIN MARCA MA ON MA.MAR_codigo=M.MAR_codigo
-        JOIN ESTADO E ON E.EST_codigo=TJ.TAR_estado			
+		$query = "SELECT U.UNI_placa AS placa, U.UNI_numerounidad AS numUnidad, TAR_serie AS tarjetaCirculacion,
+		CONVERT(VARCHAR(10),TAR_fechaemision, 103) AS fechaEmision,
+		ASE_descripcion AS aseguradora,
+		EST_descripcion AS estado, ASO_razonsocial AS asociacion,
+		(PER_apellidos +', '+PER_nombre) AS propietario
+		FROM TARJETA_CIRCULACION  TJ
+		INNER JOIN UNIDAD U ON U.UNI_codigo=TJ.UNI_codigo
+		INNER JOIN PERSONA PER ON PER.PER_codigo = U.PRO_codigo
+		INNER JOIN ASOCIACION A ON A.ASO_codigo=U.ASO_codigo
+		LEFT JOIN RESOLUCION R ON R.ASO_codigo =A.ASO_codigo
+		INNER JOIN MODELO M ON M.MOD_codigo = U.MOD_codigo
+		INNER JOIN MARCA MA ON MA.MAR_codigo=M.MAR_codigo
+		JOIN ESTADO E ON E.EST_codigo=TJ.TAR_estado	
+		INNER JOIN ASEGURADORA_VEHICULO AV ON AV.UNI_codigo = U.UNI_codigo
+		INNER JOIN ASEGURADORA ASE  ON ASE.ASE_codigo = AV.ASE_codigo		
         WHERE UNI_placa = :s
         ORDER BY TAR_fechaemision DESC";
 		$stmt = $this->conector->prepare($query);
