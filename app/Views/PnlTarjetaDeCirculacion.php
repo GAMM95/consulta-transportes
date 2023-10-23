@@ -88,7 +88,7 @@
 							<!-- MOSTRAR FECHA DE CADUCIDAD -->
 							<figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
 								<blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
-									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">ASEGURADORA</h3>
+									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">AFOCAT</h3>
 									<p class="my-4"><?php echo $resultadoBusqueda[0]['aseguradora']; ?></p>
 								</blockquote>
 							</figure>
