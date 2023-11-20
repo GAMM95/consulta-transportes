@@ -63,7 +63,7 @@ class ConsultaController
         // Puedes agregar aquí otras cantidades si es necesario
       ];
     } catch (Exception $e) {
-      // Manejo de errores
+      // Manejo de excepcion de errores
       throw new Exception('Error al obtener las cantidades: ' . $e->getMessage());
     }
   }

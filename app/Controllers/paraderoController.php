@@ -16,13 +16,12 @@ class ParaderosController
     {
         // Verifica si la solicitud es POST (es decir, se envió el formulario)
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-            // Obtén los valores de usuario y contraseña del formulario
+            // Obtener los valores de usuario y contraseña del formulario
             $placa = $_GET['busqueda'];
 //            $placa = '8596-1T';
             $paraderosConsulta = $this->paraderosModel->obtenerParaderosporplaca($placa);
 
             return $paraderosConsulta;
-//            include("papeletas.php");
             exit(); // Termina la ejecución después de mostrar los resultados
         }
     }

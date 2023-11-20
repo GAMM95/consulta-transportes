@@ -18,13 +18,6 @@
   <!-- Contenedor principal -->
   <div class="mainContent">
     
-    <!-- Incluir el encabezado desde un archivo externo -->
-    <?php
-    // include("app/Views/partials/header.php");
-    ?>
-    
-    
-
   </div>
 </body>
 

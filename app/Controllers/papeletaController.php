@@ -20,9 +20,7 @@ class PapeletaController
             $placa = $_GET['busqueda'];
 //            $placa = '8596-1T';
             $papeletasConsulta = $this->papeletasModel->obtenerPapeletasNoPagadasPorPlaca($placa);
-
             return $papeletasConsulta;
-//            include("papeletas.php");
             exit(); // Termina la ejecución después de mostrar los resultados
         }
     }
