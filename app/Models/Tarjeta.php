@@ -23,7 +23,8 @@ class Tarjeta
 	 */
 	public function obtenerTarjetaPorPlaca($uniPlaca)
 	{
-		$query = "SELECT U.UNI_placa AS placa, U.UNI_numerounidad AS numUnidad, TAR_serie AS tarjetaCirculacion,
+		$query = "SELECT U.UNI_placa AS placa, U.UNI_numerounidad AS numUnidad, 
+		TAR_serie AS tarjetaCirculacion,
 		CONVERT(VARCHAR(10),TAR_fechaemision, 103) AS fechaEmision,
 		ASE_descripcion AS aseguradora,
 		EST_descripcion AS estado, ASO_razonsocial AS asociacion,

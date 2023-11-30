@@ -20,7 +20,6 @@ class ParaderosController
       // Obtener los valores de usuario y contraseña del formulario
       $placa = $_GET['busqueda'];
       $paraderosConsulta = $this->paraderosModel->obtenerParaderosporplaca($placa);
-
       return $paraderosConsulta;
       exit(); // Termina la ejecución después de mostrar los resultados
     }
