@@ -13,17 +13,25 @@ class Paraderos
 		$this->conector = $conector;
 	}
 
-	// Método para obtener información de paraderos por placa de unidad
+	  /**
+   * Obtiene los paraderos asociadas a una placa de vehículo.
+   * @param string $uniPlaca La placa del vehículo para buscar los paraderos.
+   * @return array La información de los paraderos .
+   */
 	public function obtenerParaderosporplaca($uniPlaca)
 	{
 		// Consulta SQL para obtener información de paraderos
-		$query = "SELECT DISTINCT U.UNI_placa AS placa, (P.PER_apellidos + ', '+ P.PER_nombre) AS conductor, A.ASO_razonsocial as asociacion, rp.PAR_descripcion as direccion, rp.PAR_referencia as referencia
-                FROM UNIDAD U
-                LEFT JOIN ASOCIACION A ON U.UNI_codigo = A.ASO_codigo
-                INNER JOIN PERSONA P ON P.PER_codigo = U.PRO_codigo
-                INNER JOIN RESOLUCION R ON r.ASO_codigo = a.ASO_codigo
-                INNER JOIN RESOLUCION_PARADERO rp on rp.RES_codigo = r.RES_codigo
-                WHERE U.UNI_placa = :placa";
+		$query = "SELECT DISTINCT U.UNI_placa AS placa, 
+		(P.PER_apellidos + ', '+ P.PER_nombre) AS conductor, 
+		A.ASO_razonsocial as asociacion, 
+		rp.PAR_descripcion as direccion, 
+		rp.PAR_referencia as referencia
+      FROM UNIDAD U
+      LEFT JOIN ASOCIACION A ON U.UNI_codigo = A.ASO_codigo
+      INNER JOIN PERSONA P ON P.PER_codigo = U.PRO_codigo
+      INNER JOIN RESOLUCION R ON r.ASO_codigo = a.ASO_codigo
+      INNER JOIN RESOLUCION_PARADERO rp on rp.RES_codigo = r.RES_codigo
+      WHERE U.UNI_placa = :placa";
 
 		// Preparar la consulta SQL con parámetros
 		$stmt = $this->conector->prepare($query);

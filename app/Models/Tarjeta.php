@@ -9,7 +9,6 @@ class Tarjeta
 
 	/**
 	 * Constructor de la clase Papeletas.
-	 *
 	 * @param PDO $conector La instancia de conexión a la base de datos.
 	 */
 	public function __construct($conector)
@@ -17,7 +16,11 @@ class Tarjeta
 		$this->conector = $conector;
 	}
 
-
+	/**
+	 * Obtiene información de la tarjeta de circulación por placa.
+	 * @param string $uniPlaca La placa del vehículo para buscar la tarjeta.
+	 * @return array La información de la tarjeta de circulación.
+	 */
 	public function obtenerTarjetaPorPlaca($uniPlaca)
 	{
 		$query = "SELECT U.UNI_placa AS placa, U.UNI_numerounidad AS numUnidad, TAR_serie AS tarjetaCirculacion,

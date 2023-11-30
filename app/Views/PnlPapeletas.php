@@ -72,7 +72,6 @@
 										<th scope="col" class="px-6 py-3">
 											Fecha de Emisi&oacute;n
 										</th>
-
 										<th scope="col" class="px-6 py-3">
 											C&oacute;digo de Infracci&oacute;n
 										</th>

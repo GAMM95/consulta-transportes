@@ -9,7 +9,6 @@ class Asociaciones
 
   /**
    * Constructor de la clase Asociaciones.
-   *
    * @param PDO $conector La instancia de conexión a la base de datos.
    */
   public function __construct($conector)
@@ -19,7 +18,6 @@ class Asociaciones
 
   /**
    * Obtiene la cantidad de asociaciones desde la base de datos.
-   *
    * @return int Retorna la cantidad de asociaciones como un entero. Si hay un error, retorna 0.
    */
   public function obtenerCantidadAsociaciones()

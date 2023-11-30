@@ -25,7 +25,6 @@ $resultadoBusqueda = NULL;
 if (!empty($busqueda)) {
     $resultadoBusqueda = $controller->consultarParaderos();
 } else {
-
 }
 ?>
 

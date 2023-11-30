@@ -9,7 +9,6 @@ class Papeletas
 
   /**
    * Constructor de la clase Papeletas.
-   *
    * @param PDO $conector La instancia de conexión a la base de datos.
    */
   public function __construct($conector)
@@ -19,7 +18,6 @@ class Papeletas
 
   /**
    * Obtiene la cantidad de papeletas sin pago desde la base de datos.
-   *
    * @return int Retorna la cantidad de papeletas sin pago como un entero. Si hay un error, retorna 0.
    */
   public function obtenerCantidadPapeletasSinPago()
@@ -41,9 +39,17 @@ class Papeletas
     }
   }
 
+  /**
+   * Obtiene las papeletas no pagadas asociadas a una placa de vehículo.
+   * @param string $uniPlaca La placa del vehículo para buscar las papeletas.
+   * @return array La información de las papeletas no pagadas.
+   */
   public function obtenerPapeletasNoPagadasPorPlaca($uniPlaca)
   {
-    $query = "SELECT (PER_nombre+ ', '+ PER_apellidos) AS conductor,  CONVERT(VARCHAR(10),PAP_fechaemision,103) +' '+PAP_hora AS fechaEmisionFormateada, PAP_serie as serie, UNI_tarjetapropiedad as tarjetaPropiedad, I.INF_codigodesc as codigoInfraccion, EST_descripcion AS estado
+    $query = "SELECT (PER_nombre+ ', '+ PER_apellidos) AS conductor,  
+    CONVERT(VARCHAR(10),PAP_fechaemision,103) +' '+PAP_hora AS fechaEmisionFormateada, 
+    PAP_serie as serie, UNI_tarjetapropiedad as tarjetaPropiedad, 
+    I.INF_codigodesc as codigoInfraccion, EST_descripcion AS estado
     FROM PAPELETA P
     INNER JOIN UNIDAD U ON U.UNI_codigo = P.UNI_codigo
     INNER JOIN PERSONA PER ON PER.PER_codigo = U.CON_codigo

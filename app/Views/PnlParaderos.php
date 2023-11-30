@@ -59,9 +59,6 @@
               <table class="w-full mt-8 rounded text-sm text-left text-gray-500">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
-                    <!-- <th scope="col" class="px-6 py-3">
-                      Placa
-                    </th> -->
                     <th scope="col" class="px-6 py-3">
                       Asociaci&oacute;n
                     </th>

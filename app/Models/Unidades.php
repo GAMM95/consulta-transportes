@@ -9,7 +9,6 @@ class Unidades
 
   /**
    * Constructor de la clase Unidades.
-   *
    * @param PDO $conector La instancia de conexión a la base de datos.
    */
   public function __construct($conector)
@@ -19,7 +18,6 @@ class Unidades
   
   /**
    * Obtiene la cantidad de unidades desde la base de datos.
-   *
    * @return int Retorna la cantidad de unidades como un entero. Si hay un error, retorna 0.
    */
   public function obtenerCantidadUnidades()

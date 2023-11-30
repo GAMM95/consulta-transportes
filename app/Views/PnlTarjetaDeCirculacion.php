@@ -53,7 +53,7 @@
 						<div style="gap: 0;" class="mt-4 grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 xl:grid-cols-3 md:grid-cols-2">
 
 							<!-- PRIMERA FILA -->
-							<!-- mostrar placa -->
+							<!-- MOSTRAR PLACA -->
 							<figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
 								<blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
 									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">PLACA</h3>
@@ -85,7 +85,7 @@
 								</blockquote>
 							</figure>
 
-							<!-- MOSTRAR FECHA DE CADUCIDAD -->
+							<!-- MOSTRAR AFOCAT -->
 							<figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
 								<blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
 									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">AFOCAT</h3>
@@ -93,6 +93,7 @@
 								</blockquote>
 							</figure>
 
+							<!-- MOSTRAR ESTADO -->
 							<figure class="flex flex-col items-center justify-center p-2 text-center bg-white border border-gray-200 rounded-bl-lg dark:bg-gray-800 dark:border-gray-700">
 								<blockquote class="max-w-2xl mx-auto text-gray-500 dark:text-gray-400">
 									<h3 class="text-lg font-semibold text-gray-900 dark:text-white">ESTADO</h3>

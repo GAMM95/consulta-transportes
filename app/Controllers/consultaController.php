@@ -3,10 +3,8 @@ require_once 'autoloader.php';
 
 /**
  * Controlador de Consulta.
- *
  * Este controlador se encarga de gestionar las consultas y obtener cantidades relacionadas
- * con papeletas, paraderos y asociaciones a partir de los modelos correspondientes.
- *
+ * con papeletas, unidades y asociaciones a partir de los modelos correspondientes.
  * @package ConsultaTransportes
  */
 class ConsultaController
@@ -28,7 +26,6 @@ class ConsultaController
 
   /**
    * Constructor de la clase ConsultaController.
-   *
    * @param Papeletas     $papeletasModel     Modelo de Papeletas
    * @param Unidades     $unidadesModel     Modelo de Unidades
    * @param Asociaciones  $asociacionesModel  Modelo de Asociaciones
@@ -42,7 +39,6 @@ class ConsultaController
 
   /**
    * Obtiene las cantidades relacionadas con papeletas, paraderos y asociaciones.
-   *
    * @return array Un arreglo asociativo con las cantidades.
    * @throws Exception Si ocurre un error al obtener las cantidades.
    */
@@ -53,14 +49,11 @@ class ConsultaController
       $cantidadUnidades = $this->unidadesModel->obtenerCantidadUnidades();
       $cantidadAsociaciones = $this->asociacionesModel->obtenerCantidadAsociaciones();
 
-      // Aquí puedes realizar cualquier otra lógica necesaria antes de devolver las cantidades
-
       // Retorna las cantidades en un arreglo asociativo
       return [
         'papeletas' => $cantidadPapeletas,
         'unidades' => $cantidadUnidades,
         'asociaciones' => $cantidadAsociaciones,
-        // Puedes agregar aquí otras cantidades si es necesario
       ];
     } catch (Exception $e) {
       // Manejo de excepcion de errores
